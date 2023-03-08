@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_148inrv" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="Decision_1465j3t" name="Calculate Price">
+    <informationRequirement id="InformationRequirement_0z88yfp">
+      <requiredInput href="#InputData_14a5gvj" />
+    </informationRequirement>
+    <knowledgeRequirement id="KnowledgeRequirement_0gos5vp">
+      <requiredKnowledge href="#BusinessKnowledgeModel_0200pst" />
+    </knowledgeRequirement>
+    <authorityRequirement id="AuthorityRequirement_1u0aa4n">
+      <requiredAuthority href="#KnowledgeSource_1i1bh3x" />
+    </authorityRequirement>
+    <decisionTable id="DecisionTable_00n7iq5" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="Input_1" label="Room Type">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1vkrame">
+          <text>"meeting room","conference room"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1xt4h8q" label="Number Of People">
+        <inputExpression id="LiteralExpression_14xb0go" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1hcps3x" label="Extras">
+        <inputExpression id="LiteralExpression_0jly5t1" typeRef="string">
+          <text>extras</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_001yyan">
+          <text>"beamer","flipchart","whiteboard"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" name="Price" typeRef="number" />
+      <rule id="DecisionRule_1w8fl41">
+        <description></description>
+        <inputEntry id="UnaryTests_14q0k3n">
+          <text>"meeting room"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1agznd5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hzgavs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bd6rt9">
+          <text>500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03rlya3">
+        <inputEntry id="UnaryTests_0wc02jy">
+          <text>"conference room"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02u453r">
+          <text>&lt;= 30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gohrl1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xaqlyk">
+          <text>800</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ogczfj">
+        <inputEntry id="UnaryTests_070czml">
+          <text>"conference room"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13xebky">
+          <text>&gt; 30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pez216">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_092d3ca">
+          <text>1200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1l0feiy">
+        <inputEntry id="UnaryTests_0g99psr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fvr9xg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k1cgii">
+          <text>"beamer"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g0fdjr">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p8s2v3">
+        <inputEntry id="UnaryTests_0xu42s0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1appgqr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19gv3kh">
+          <text>"flipchart"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v4wece">
+          <text>30</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vwg1uk">
+        <inputEntry id="UnaryTests_1ly5tu9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07q3z50">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wps3tj">
+          <text>"whiteboard"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18v3ww3">
+          <text>40</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_1i1bh3x" name="Knowledge Source" />
+  <inputData id="InputData_14a5gvj" name="Request" />
+  <businessKnowledgeModel id="BusinessKnowledgeModel_0200pst" name="Knowledge Model" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1465j3t">
+        <dc:Bounds height="80" width="180" x="390" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_16e777w" dmnElementRef="KnowledgeSource_1i1bh3x">
+        <dc:Bounds height="63" width="100" x="160" y="109" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_14uuz5e" dmnElementRef="AuthorityRequirement_1u0aa4n">
+        <di:waypoint x="260" y="141" />
+        <di:waypoint x="390" y="140" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_16apudy" dmnElementRef="InputData_14a5gvj">
+        <dc:Bounds height="45" width="125" x="417" y="258" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1koitlb" dmnElementRef="InformationRequirement_0z88yfp">
+        <di:waypoint x="480" y="258" />
+        <di:waypoint x="480" y="200" />
+        <di:waypoint x="480" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1pkm3x6" dmnElementRef="BusinessKnowledgeModel_0200pst">
+        <dc:Bounds height="46" width="135" x="663" y="117" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1u04avq" dmnElementRef="KnowledgeRequirement_0gos5vp">
+        <di:waypoint x="663" y="140" />
+        <di:waypoint x="570" y="140" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

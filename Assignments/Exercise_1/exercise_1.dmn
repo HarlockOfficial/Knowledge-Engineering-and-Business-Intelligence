@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_1biafch" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="Decision_1p64r8j" name="Candidate Eligibility">
+    <informationRequirement id="InformationRequirement_18bzmt2">
+      <requiredInput href="#InputData_1vyegh3" />
+    </informationRequirement>
+    <knowledgeRequirement id="KnowledgeRequirement_1lxc9e4">
+      <requiredKnowledge href="#BusinessKnowledgeModel_1hb7raw" />
+    </knowledgeRequirement>
+    <authorityRequirement id="AuthorityRequirement_1lgodqz">
+      <requiredAuthority href="#KnowledgeSource_0kcnvg3" />
+    </authorityRequirement>
+    <decisionTable id="DecisionTable_0zhkwba" hitPolicy="FIRST">
+      <input id="Input_1" label="Bachelor Degree" biodi:width="209">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>BachelorDegreee</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1jnq74p">
+          <text>"Information Systems","Computer Science","Business Administration","other"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1w8zsi7" label="Grade">
+        <inputExpression id="LiteralExpression_0dhcnmh" typeRef="string">
+          <text>Grade</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1e8lzr5">
+          <text>"A","B","C","D","E"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1wxsc2y" label="Professional Experience" biodi:width="226">
+        <inputExpression id="LiteralExpression_0gl5lml" typeRef="number">
+          <text>ProfessionalExperience</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Is Candidate Elegible" name="IsCandidateElegible" typeRef="boolean" biodi:width="217" />
+      <rule id="DecisionRule_1d5hkrl">
+        <inputEntry id="UnaryTests_1hq9n5k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ejvrx1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u7s53x">
+          <text>&lt; 6</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ja5zp0">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lb1cf6">
+        <inputEntry id="UnaryTests_19lzks1">
+          <text>"other"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13u3e28">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14l7n58">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04ff88c">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c18mvn">
+        <inputEntry id="UnaryTests_117qdln">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ulr95v">
+          <text>"C","D","E"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d45kk7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1htt04e">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kxuzw1">
+        <description>Actually even a rule with any match for input and true as output could have worked, but double checking is always important</description>
+        <inputEntry id="UnaryTests_09cru1z">
+          <text>"Information Systems","Computer Science","Business Administration"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kv7k32">
+          <text>"A","B"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n3l449">
+          <text>&gt;= 6</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04sqv5e">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06d8h76">
+        <description>The check should never reach this roule, if that's the case, then the input form is not correctly filled</description>
+        <inputEntry id="UnaryTests_09ubefu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02k7zwu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ed5hd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1so31vi">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1vyegh3" name="Input" />
+  <knowledgeSource id="KnowledgeSource_0kcnvg3" name="Knowledge Source" />
+  <businessKnowledgeModel id="BusinessKnowledgeModel_1hb7raw" name="Knowledge Model" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1p64r8j">
+        <dc:Bounds height="80" width="180" x="380" y="120" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1hn8793" dmnElementRef="InputData_1vyegh3">
+        <dc:Bounds height="45" width="125" x="408" y="258" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1qw3vh1" dmnElementRef="InformationRequirement_18bzmt2">
+        <di:waypoint x="471" y="258" />
+        <di:waypoint x="470" y="220" />
+        <di:waypoint x="470" y="200" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0hpjazr" dmnElementRef="KnowledgeSource_0kcnvg3">
+        <dc:Bounds height="63" width="100" x="160" y="129" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0aui5ha" dmnElementRef="AuthorityRequirement_1lgodqz">
+        <di:waypoint x="260" y="161" />
+        <di:waypoint x="380" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0e2z818" dmnElementRef="BusinessKnowledgeModel_1hb7raw">
+        <dc:Bounds height="46" width="135" x="653" y="137" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0r8yqmv" dmnElementRef="KnowledgeRequirement_1lxc9e4">
+        <di:waypoint x="653" y="160" />
+        <di:waypoint x="560" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
