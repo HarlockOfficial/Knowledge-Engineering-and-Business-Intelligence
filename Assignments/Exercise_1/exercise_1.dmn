@@ -10,7 +10,7 @@
     <authorityRequirement id="AuthorityRequirement_1lgodqz">
       <requiredAuthority href="#KnowledgeSource_0kcnvg3" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_0zhkwba" hitPolicy="FIRST">
+    <decisionTable id="DecisionTable_0zhkwba">
       <input id="Input_1" label="Bachelor Degree" biodi:width="209">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text>BachelorDegreee</text>
@@ -88,21 +88,6 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_04sqv5e">
           <text>true</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_06d8h76">
-        <description>The check should never reach this roule, if that's the case, then the input form is not correctly filled</description>
-        <inputEntry id="UnaryTests_09ubefu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02k7zwu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09ed5hd">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1so31vi">
-          <text>false</text>
         </outputEntry>
       </rule>
     </decisionTable>
