@@ -1,11 +1,11 @@
 person(knut).
 class(kebi).
-class(Y) :- teach(X, Y), teacher(X)
-%      <person>,<class>
+%       <___>,<class>
 attends(john, kebi).
 student(X) :- attends(X, Y), class(Y).
 ?- student(john)
 
+%     <person>,<class>
 teach(knut, kebi).
 teacher(X) :- teach(X, Y), class(Y).
 ?- teacher(knut)
