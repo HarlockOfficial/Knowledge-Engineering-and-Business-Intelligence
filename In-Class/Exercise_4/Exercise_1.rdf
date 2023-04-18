@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:it.unicam.kebi/2023-04-18/"
+     xml:base="urn:absolute:it.unicam.kebi/2023-04-18/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:kebi="urn:absolute:it.unicam.kebi/2023-04-18/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/is_supervised_by -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/is_supervised_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/project"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/is_taught_by -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/is_taught_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/courses"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/lives_in -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/lives_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/performs -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/performs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/student"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/project"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/teaches -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/teaches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/courses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/has_credits -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/has_credits">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/module"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/has_name -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/academic_staff"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/has_supervisor -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/has_supervisor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/project"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/has_title -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/has_title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/module"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/academic_staff -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/academic_staff">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/country -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/courses -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/courses">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/module"/>
+        <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/project"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/lecturer -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/lecturer">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/academic_staff"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/module -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/module">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/project -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/project">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/module"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/student -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/student">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/Giordano -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/Giordano">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/student"/>
+        <performs rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/master_thesis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/Holger -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/Holger">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+        <has_name>Holger Wache</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/KEBI -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/KEBI">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/courses"/>
+        <is_taught_by rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/Holger"/>
+        <is_taught_by rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/Knut"/>
+        <has_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</has_credits>
+        <has_title>Knowledge Engeneering and Business Intelligence</has_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/Knut -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/Knut">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/lecturer"/>
+        <lives_in rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/Switzerland"/>
+        <has_name>Knut Hinkelmann</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/Switzerland -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/Switzerland">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/country"/>
+        <has_name>Switzerland</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi/2023-04-18/master_thesis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi/2023-04-18/master_thesis">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/project"/>
+        <is_supervised_by rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/Knut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/is_taught_by"/>
+                        <swrl:argument1 rdf:resource="c"/>
+                        <swrl:argument2 rdf:resource="l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi/2023-04-18/teaches"/>
+                        <swrl:argument1 rdf:resource="l"/>
+                        <swrl:argument2 rdf:resource="c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
