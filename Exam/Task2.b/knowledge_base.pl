@@ -30,15 +30,19 @@ dish(parmesan).
 dish(maitakemushroom).
 
 % wine(unique_identifier, grape_variety)
-wine(a, merlot).
-wine(a, viura).
+containsgrape(a, merlot).
+containsgrape(a, cabernetfranc).
+containsgrape(a, syrah)
 
-winebelongs(a, sicily).
-winebelongs(a, catalunia).
+winebelongs(a, tuscany).
 
-fruity(a, 6).
-bold(a, 1).
-savory(a, 8).
-dry(a, 4).
-tannin(a, 10).
+fruity(a, 3).
+bold(a, 7).
+savory(a, 4).
+dry(a, 2).
+tannin(a, 9).
+
+wineusedwith(a, beef).
+
+winename(a, supertuscan).
 

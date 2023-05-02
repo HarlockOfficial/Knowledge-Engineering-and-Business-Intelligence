@@ -2,5 +2,5 @@
 :- ensure_loaded(horn_clause)
 
 % Queries
-?- wine(merlot)
+?- query([italy, spain], [sicily, catalunia], [merlot], 6, B, C, D, E, [beef], OUT).
 
