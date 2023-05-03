@@ -16,9 +16,7 @@ region(bordeaux, france).
 region(loirevalley, france).
 region(champagne, france).
 
-region(meseta, spain).
 region(rhonevalley, spain).
-region(andalusia, spain).
 region(levante, spain).
 region(catalunia, spain).
 region(rioja, spain).

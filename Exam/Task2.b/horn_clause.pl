@@ -27,6 +27,8 @@ validcountry([]).
 validcountry([H|T]) :- country(H), validcountry(T).
 
 validregion([], []).
+validregion([], COUNTRYLIST).
+validregion(REGIONLIST, []).
 validregion([H|T], [A|B]):- region(H, A), validregion(T, B).
 validregion([H|T], [A|B]):- region(H, A), validregion(H, B).
 validregion([H|T], [A|B]):- region(H, A), validregion(T, A).
@@ -40,4 +42,3 @@ findwine(WINE, [H|T]):- containsgrape(WINE, H), findwine(WINE, T).
 
 finddish(WINE, [H|T]):- wineusedwith(WINE, H).
 finddish(WINE, [H|T]):- finddish(WINE, T).
-
