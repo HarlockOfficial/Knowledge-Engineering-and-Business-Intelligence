@@ -6,7 +6,7 @@ country(france).
 
 %regions
 
-region(marche, italy).
+region(marches, italy).
 region(tuscany, italy).
 region(veneto, italy).
 region(sicily, italy).
@@ -179,6 +179,6 @@ winename(d, merlot).
 winename(e, cabernetfranc).
 winename(f, viura).
 winename(g, pinotnoir).
-winename(h, bourdeaux).
+winename(h, bordeaux).
 winename(i, rhone).
 winename(j, northwest).
