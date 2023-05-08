@@ -17,6 +17,23 @@ query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, WINE) :-
     finddish(X, DISH),
     winename(X, WINE).
 
+
+softened_query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, WINE, THRESHOLD) :-
+    validcountry(COUNTRY), 
+    validregion(REGION, COUNTRY), 
+    validgrape(GRAPE), 
+    validdish(DISH),  
+    fruity(X, Y), Y - THRESHOLD =< FRUITY, FRUITY =< Y + THRESHOLD, 
+    bold(X, Z), Z - THRESHOLD =< BOLD, BOLD =< Z + THRESHOLD,
+    savory(X, W), W - THRESHOLD =< SAVORY, SAVORY =< W + THRESHOLD,
+    dry(X, H), H - THRESHOLD =< DRY, DRY =< H + THRESHOLD,
+    tannin(X, K), K - THRESHOLD =< TANNIN, TANNIN =< K + THRESHOLD,
+    findwinebelongs(X, REGION),
+    findwine(X, GRAPE),
+    finddish(X, DISH),
+    winename(X, WINE).
+
+
 validgrape([]).
 validgrape([H|T]):- grape(H), validgrape(T).
 
