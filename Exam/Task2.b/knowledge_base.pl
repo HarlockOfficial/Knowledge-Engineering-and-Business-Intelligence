@@ -119,6 +119,7 @@ bold(f, 2).
 bold(g, 4).
 bold(h, 4).
 bold(i, 4).
+bold(j, 3).
 
 savory(a, 3).
 savory(b, 2).
