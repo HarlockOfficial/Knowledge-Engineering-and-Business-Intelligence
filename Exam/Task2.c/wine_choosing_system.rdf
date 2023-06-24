@@ -26,9 +26,6 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
     </owl:ObjectProperty>
@@ -39,9 +36,6 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to_region">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
     </owl:ObjectProperty>
@@ -52,8 +46,6 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#contains_grape">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
     </owl:ObjectProperty>
@@ -64,8 +56,6 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#paired_with">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
     </owl:ObjectProperty>
@@ -641,27 +631,6 @@
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</tannin>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
-            <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-            <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-            <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
-            <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 

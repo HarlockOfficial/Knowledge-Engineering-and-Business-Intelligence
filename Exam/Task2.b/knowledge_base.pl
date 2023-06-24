@@ -148,7 +148,7 @@ tannin(b, 1).
 tannin(c, 5).
 tannin(d, 3).
 tannin(e, 4).
-tannin(f, 9).
+tannin(f, 5).
 tannin(g, 2).
 tannin(h, 4).
 tannin(i, 4).
