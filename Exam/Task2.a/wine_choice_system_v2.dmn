@@ -4,6 +4,9 @@
     <informationRequirement id="InformationRequirement_0dvgsg7">
       <requiredInput href="#InputData_00wtmje" />
     </informationRequirement>
+    <informationRequirement id="InformationRequirement_0lvl26y">
+      <requiredInput href="#InputData_1iha9p9" />
+    </informationRequirement>
     <authorityRequirement id="AuthorityRequirement_0ks5gz4">
       <requiredAuthority href="#KnowledgeSource_1q428mw" />
     </authorityRequirement>
@@ -13,10 +16,18 @@
           <text></text>
         </inputExpression>
       </input>
+      <input id="InputClause_0mj72mq" label="ExcludedDish">
+        <inputExpression id="LiteralExpression_0297r83" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
       <output id="Output_1" label="WinesFilteredByDish" name="WinesFilteredByDish" typeRef="string" />
       <rule id="DecisionRule_1271x9a">
         <inputEntry id="UnaryTests_0vaont3">
           <text>"beef"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q570qg">
+          <text>not("beef")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0csebdv">
           <text>"supertuscan"</text>
@@ -26,6 +37,9 @@
         <inputEntry id="UnaryTests_0a5wsky">
           <text>"beef"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_02ordld">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0jhcy3q">
           <text>"syrah"</text>
         </outputEntry>
@@ -33,6 +47,9 @@
       <rule id="DecisionRule_11yvq04">
         <inputEntry id="UnaryTests_13f9hnr">
           <text>"beef"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ffk1m">
+          <text>not("beef")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_115ug8b">
           <text>"bordeaux"</text>
@@ -42,6 +59,9 @@
         <inputEntry id="UnaryTests_0kqjwz3">
           <text>"beef"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1ces2ld">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0jr15h9">
           <text>"rhone"</text>
         </outputEntry>
@@ -49,6 +69,9 @@
       <rule id="DecisionRule_0k70qdv">
         <inputEntry id="UnaryTests_12ezykk">
           <text>"turkey"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00dffkk">
+          <text>not("turkey")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mzk0w8">
           <text>"rose"</text>
@@ -58,6 +81,9 @@
         <inputEntry id="UnaryTests_17vd7xu">
           <text>"turkey"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0buvowb">
+          <text>not("turkey")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1ggezv1">
           <text>"viura"</text>
         </outputEntry>
@@ -65,6 +91,9 @@
       <rule id="DecisionRule_1jx4ta5">
         <inputEntry id="UnaryTests_0rm3nrg">
           <text>"turkey"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nv8csh">
+          <text>not("turkey")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1a763k8">
           <text>"pinotnoir"</text>
@@ -74,6 +103,9 @@
         <inputEntry id="UnaryTests_1xw8m44">
           <text>"turkey"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_112rdut">
+          <text>not("turkey")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_05ie92h">
           <text>"northwest"</text>
         </outputEntry>
@@ -81,6 +113,9 @@
       <rule id="DecisionRule_0q325oe">
         <inputEntry id="UnaryTests_1obvf08">
           <text>"parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ndmoz4">
+          <text>not("parmesan")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1l8f3l9">
           <text>"syrah"</text>
@@ -90,6 +125,9 @@
         <inputEntry id="UnaryTests_0165af7">
           <text>"maitakemushroom"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_026h8v4">
+          <text>not("maitakemushroom")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1ofujlm">
           <text>"merlot"</text>
         </outputEntry>
@@ -97,6 +135,9 @@
       <rule id="DecisionRule_1hffklo">
         <inputEntry id="UnaryTests_15kc9ai">
           <text>"maitakemushroom"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00j2e2p">
+          <text>not("maitakemushroom")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1or80b8">
           <text>"cabernetfranc"</text>
@@ -106,6 +147,9 @@
         <inputEntry id="UnaryTests_1h3gpdz">
           <text>"maitakemushroom"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_037829r">
+          <text>not("maitakemushroom")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ox9nlk">
           <text>"pinotnoir"</text>
         </outputEntry>
@@ -113,6 +157,9 @@
       <rule id="DecisionRule_04pzsph">
         <inputEntry id="UnaryTests_0xtulds">
           <text>"maitakemushroom"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15dabv0">
+          <text>not("maitakemushroom")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1803nnr">
           <text>"northwest"</text>
@@ -122,6 +169,9 @@
         <inputEntry id="UnaryTests_1hx9xsu">
           <text>"crab"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_14vtnnu">
+          <text>not("crab")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1h2qlwb">
           <text>"viura"</text>
         </outputEntry>
@@ -130,39 +180,10 @@
         <inputEntry id="UnaryTests_01bc33x">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_11ifn13">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_196qpft">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0mhsqmi">
-        <inputEntry id="UnaryTests_072vo95">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_12oejbv">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ieof0k">
-        <inputEntry id="UnaryTests_1lvm9ja">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1r8peo4">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1mysp93">
-        <inputEntry id="UnaryTests_0mgr7x1">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_06sfv6v">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ouwk98">
-        <inputEntry id="UnaryTests_1vrxola">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1o1xfd0">
           <text>"supertuscan"</text>
         </outputEntry>
       </rule>
@@ -170,39 +191,10 @@
         <inputEntry id="UnaryTests_190wvyu">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1f3um7o">
+          <text>not("turkey")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0xx91i7">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1jmhwkd">
-        <inputEntry id="UnaryTests_1jlagyt">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1gskba4">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0m3ay5x">
-        <inputEntry id="UnaryTests_0a3uv0x">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1a21gt5">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1w37fwx">
-        <inputEntry id="UnaryTests_06hmvqv">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0497w5b">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_17dvffp">
-        <inputEntry id="UnaryTests_0gl5bh0">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_03y9pzn">
           <text>"rose"</text>
         </outputEntry>
       </rule>
@@ -210,31 +202,10 @@
         <inputEntry id="UnaryTests_0igveqv">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1cf3r5o">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0uu6gun">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1wf1slh">
-        <inputEntry id="UnaryTests_11gleza">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1nbr9v7">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0sa2xki">
-        <inputEntry id="UnaryTests_086rtac">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0812f3c">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ejtdym">
-        <inputEntry id="UnaryTests_1gi40k0">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0oho087">
           <text>"syrah"</text>
         </outputEntry>
       </rule>
@@ -242,39 +213,10 @@
         <inputEntry id="UnaryTests_0dmnzyp">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_048z700">
+          <text>not("maitakemushroom")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_054li1i">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1x79mja">
-        <inputEntry id="UnaryTests_1lpvktc">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zz2eym">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1l6bi95">
-        <inputEntry id="UnaryTests_1rax8gt">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ku77rx">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_065m1qr">
-        <inputEntry id="UnaryTests_1ksf9k3">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ypj4ac">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0g3j4uo">
-        <inputEntry id="UnaryTests_1y7gv8h">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_127gqre">
           <text>"merlot"</text>
         </outputEntry>
       </rule>
@@ -282,39 +224,10 @@
         <inputEntry id="UnaryTests_19da3lq">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0au0t1s">
+          <text>not("maitakemushroom")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1qg6e0y">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_07awrtg">
-        <inputEntry id="UnaryTests_011rfzk">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1fs33da">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0pfva8r">
-        <inputEntry id="UnaryTests_1k5p2ht">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0iy86bh">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_01fwdt5">
-        <inputEntry id="UnaryTests_1i1lcyv">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1iw0o0o">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0wd2w2t">
-        <inputEntry id="UnaryTests_09y1mls">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1e0qyns">
           <text>"cabernetfranc"</text>
         </outputEntry>
       </rule>
@@ -322,31 +235,10 @@
         <inputEntry id="UnaryTests_0hf2fdk">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1ovc7xg">
+          <text>not("turkey")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_012cuum">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0wmbxf8">
-        <inputEntry id="UnaryTests_167t9su">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_15vq1pq">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1k6wlj7">
-        <inputEntry id="UnaryTests_19o3mdq">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1g2bl27">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_15ojosc">
-        <inputEntry id="UnaryTests_0ildi7p">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_11mqgfa">
           <text>"viura"</text>
         </outputEntry>
       </rule>
@@ -354,31 +246,10 @@
         <inputEntry id="UnaryTests_15h31c0">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0pk345v">
+          <text>not("maitakemushroom")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_09nonpo">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_18u3b9a">
-        <inputEntry id="UnaryTests_013occ1">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1rqx7i2">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_07gczo3">
-        <inputEntry id="UnaryTests_0l8bzih">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_110gf3f">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0z307z0">
-        <inputEntry id="UnaryTests_07g1fmu">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ogngmz">
           <text>"pinotnoir"</text>
         </outputEntry>
       </rule>
@@ -386,39 +257,10 @@
         <inputEntry id="UnaryTests_1srkxle">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1qe7gl2">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0bfqbeg">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_05isnuq">
-        <inputEntry id="UnaryTests_083z0h4">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1uczza7">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_14g4ymi">
-        <inputEntry id="UnaryTests_0h6p40c">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_02gbpxo">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1aa5s3c">
-        <inputEntry id="UnaryTests_0ags13p">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ae7bw1">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_10fydo9">
-        <inputEntry id="UnaryTests_1lnrv5m">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_16za7oc">
           <text>"bordeaux"</text>
         </outputEntry>
       </rule>
@@ -426,39 +268,10 @@
         <inputEntry id="UnaryTests_0ulcxe7">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1r1pa2z">
+          <text>not("beef")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0s4q6c1">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0643d1g">
-        <inputEntry id="UnaryTests_1ec1pu9">
-          <text>not("turkey")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0pharef">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0d5gyqg">
-        <inputEntry id="UnaryTests_1daacgs">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0w4ywm3">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0sl5ono">
-        <inputEntry id="UnaryTests_1v69yrs">
-          <text>not("maitakemushroom")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ugt6di">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1d49k68">
-        <inputEntry id="UnaryTests_0wo2z4y">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19y7c8v">
           <text>"rhone"</text>
         </outputEntry>
       </rule>
@@ -466,31 +279,10 @@
         <inputEntry id="UnaryTests_1x0yzba">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0nss8mn">
+          <text>not("turkey")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1ypyqtn">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ds3ydp">
-        <inputEntry id="UnaryTests_0x0lkcf">
-          <text>not("beef")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_06wavte">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ztc6b0">
-        <inputEntry id="UnaryTests_0ckl8ra">
-          <text>not("parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_03x077x">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1p2okay">
-        <inputEntry id="UnaryTests_03xd8xn">
-          <text>not("crab")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_052oy16">
           <text>"northwest"</text>
         </outputEntry>
       </rule>
@@ -517,6 +309,9 @@
     <informationRequirement id="InformationRequirement_0ve72cm">
       <requiredDecision href="#Decision_1ub7c7c" />
     </informationRequirement>
+    <informationRequirement id="InformationRequirement_061fqge">
+      <requiredInput href="#InputData_1dwyof2" />
+    </informationRequirement>
     <authorityRequirement id="AuthorityRequirement_1t4ebe3">
       <requiredAuthority href="#KnowledgeSource_0e4ctmy" />
     </authorityRequirement>
@@ -529,6 +324,11 @@
           <text></text>
         </inputExpression>
       </input>
+      <input id="InputClause_12fqnp6" label="ExcludedNation">
+        <inputExpression id="LiteralExpression_1uratwg" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
       <output id="OutputClause_0kmt7q8" label="WinesFilteredByNation" name="WinesFilteredByNation" typeRef="string" />
       <rule id="DecisionRule_18axz3o">
         <inputEntry id="UnaryTests_0ufmj19">
@@ -536,6 +336,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1xoc05g">
           <text>"italy"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a25e0a">
+          <text>not("italy")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nq9zfj">
           <text>"supertuscan"</text>
@@ -548,6 +351,9 @@
         <inputEntry id="UnaryTests_0u46pfp">
           <text>"france"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1s36n0a">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ijqlm2">
           <text>"rose"</text>
         </outputEntry>
@@ -558,6 +364,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0jd9e0c">
           <text>"spain","italy"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_051ikr2">
+          <text>not("italy"),not("spain")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tjr12n">
           <text>"syrah"</text>
@@ -570,6 +379,9 @@
         <inputEntry id="UnaryTests_1lfwm51">
           <text>"france","italy"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_08cl6v9">
+          <text>not("italy"),not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1fm2j4i">
           <text>"merlot"</text>
         </outputEntry>
@@ -580,6 +392,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0th3lyk">
           <text>"france","italy"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09wknwn">
+          <text>not("italy"),not("france")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_02v9q0k">
           <text>"cabernetfranc"</text>
@@ -592,6 +407,9 @@
         <inputEntry id="UnaryTests_05y53v8">
           <text>"spain"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1xwnkkn">
+          <text>not("spain")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_16q502f">
           <text>"viura"</text>
         </outputEntry>
@@ -602,6 +420,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1aqccgr">
           <text>"spain","italy"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02jgsy5">
+          <text>not("italy"),not("spain")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0qojmx2">
           <text>"pinotnoir"</text>
@@ -614,6 +435,9 @@
         <inputEntry id="UnaryTests_0ozvlev">
           <text>"france"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0596zj6">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_17mp058">
           <text>"bordeaux"</text>
         </outputEntry>
@@ -624,6 +448,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_15ity0c">
           <text>"spain"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hvjnmg">
+          <text>not("spain")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kntqin">
           <text>"rhone"</text>
@@ -636,6 +463,9 @@
         <inputEntry id="UnaryTests_0zalv0d">
           <text>"france"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_15v5dzw">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1hu01br">
           <text>"northwest"</text>
         </outputEntry>
@@ -647,29 +477,10 @@
         <inputEntry id="UnaryTests_19oolt8">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0lm1da8">
+          <text>not("italy")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0kqtlsb">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0clsm3m">
-        <inputEntry id="UnaryTests_0pa7bo3">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1i7etye">
-          <text>not("france")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13q70i2">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0apf33q">
-        <inputEntry id="UnaryTests_05shffn">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12xi42v">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0mhk1qu">
           <text>"supertuscan"</text>
         </outputEntry>
       </rule>
@@ -680,29 +491,10 @@
         <inputEntry id="UnaryTests_06jpful">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1ogqejn">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_053a8v5">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1o32j37">
-        <inputEntry id="UnaryTests_127ue8e">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qk0c1k">
-          <text>not("italy")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1whbbcd">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1bt95ma">
-        <inputEntry id="UnaryTests_1saljwd">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0r87zfq">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1yo25yx">
           <text>"rose"</text>
         </outputEntry>
       </rule>
@@ -713,18 +505,10 @@
         <inputEntry id="UnaryTests_0ay9fn7">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1qinjcu">
+          <text>not("italy"),not("spain")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ozk5jo">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1oswwok">
-        <inputEntry id="UnaryTests_1lrsb1o">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1v92cmu">
-          <text>not("france")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_04ube2y">
           <text>"syrah"</text>
         </outputEntry>
       </rule>
@@ -735,18 +519,10 @@
         <inputEntry id="UnaryTests_0o241ts">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_12bpn9l">
+          <text>not("italy"),not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1wreu9p">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1mvhw5f">
-        <inputEntry id="UnaryTests_0pdo1ii">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1j9xq3f">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0wcpnx8">
           <text>"merlot"</text>
         </outputEntry>
       </rule>
@@ -757,18 +533,10 @@
         <inputEntry id="UnaryTests_1daw98j">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1221xib">
+          <text>not("italy"),not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0h2g308">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_088d6me">
-        <inputEntry id="UnaryTests_0jae61e">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lx7o1z">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ocra5o">
           <text>"cabernetfranc"</text>
         </outputEntry>
       </rule>
@@ -779,29 +547,10 @@
         <inputEntry id="UnaryTests_1j7kakb">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0cygle2">
+          <text>not("spain")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_00z07uz">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0rkgflo">
-        <inputEntry id="UnaryTests_04eg5so">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08clqqv">
-          <text>not("italy")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1q654bv">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_153srp4">
-        <inputEntry id="UnaryTests_1plt8re">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15rtecf">
-          <text>not("france")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0vo550s">
           <text>"viura"</text>
         </outputEntry>
       </rule>
@@ -812,18 +561,10 @@
         <inputEntry id="UnaryTests_07dosmw">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0c7h683">
+          <text>not("italy"),not("spain")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ibn0n9">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0t6xx2n">
-        <inputEntry id="UnaryTests_0jqcpp1">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0pvc8r8">
-          <text>not("france")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0i4j4td">
           <text>"pinotnoir"</text>
         </outputEntry>
       </rule>
@@ -834,29 +575,10 @@
         <inputEntry id="UnaryTests_15sjsif">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1kctjid">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0sm41hw">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0w25f2p">
-        <inputEntry id="UnaryTests_0wie8dn">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_045fqf7">
-          <text>not("italy")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1rym9nm">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0nxbi4h">
-        <inputEntry id="UnaryTests_093o7bz">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nnkwfw">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0o7nope">
           <text>"bordeaux"</text>
         </outputEntry>
       </rule>
@@ -867,29 +589,10 @@
         <inputEntry id="UnaryTests_0wd5646">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0dwkowv">
+          <text>not("spain")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1rtt7kb">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0hzh3ak">
-        <inputEntry id="UnaryTests_10alj9v">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wjtrnt">
-          <text>not("italy")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1uxauui">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ettrq9">
-        <inputEntry id="UnaryTests_0tvzpnb">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10s3mdu">
-          <text>not("france")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0oqfxh7">
           <text>"rhone"</text>
         </outputEntry>
       </rule>
@@ -900,29 +603,10 @@
         <inputEntry id="UnaryTests_1qkc89a">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1c8ll06">
+          <text>not("france")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_07xaj2v">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0283laf">
-        <inputEntry id="UnaryTests_1kosa1e">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ijamcq">
-          <text>not("italy")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1wco7bz">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1c7cc5u">
-        <inputEntry id="UnaryTests_14qhvt9">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17xscgq">
-          <text>not("spain")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0alu35p">
           <text>"northwest"</text>
         </outputEntry>
       </rule>
@@ -934,6 +618,9 @@
     </informationRequirement>
     <informationRequirement id="InformationRequirement_07czk5l">
       <requiredDecision href="#Decision_0ueqrsj" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0dcqmue">
+      <requiredInput href="#InputData_1mu90zs" />
     </informationRequirement>
     <authorityRequirement id="AuthorityRequirement_0veuhf7">
       <requiredAuthority href="#KnowledgeSource_0rjlivo" />
@@ -947,6 +634,11 @@
           <text></text>
         </inputExpression>
       </input>
+      <input id="InputClause_14qu4om" label="ExcludedRegion">
+        <inputExpression id="LiteralExpression_0w8du79" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
       <output id="OutputClause_16kmt3q" label="WinesFilteredByRegion" name="WinesFilteredByRegion" typeRef="string" />
       <rule id="DecisionRule_1u4yka3">
         <inputEntry id="UnaryTests_0705kbt">
@@ -954,6 +646,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_14sfeqm">
           <text>"tuscany"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09zq5sc">
+          <text>not("tuscany")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xp3u2u">
           <text>"supertuscan"</text>
@@ -966,6 +661,9 @@
         <inputEntry id="UnaryTests_1d29abr">
           <text>"provence","loirevalley","champagne"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_15aqitq">
+          <text>not("provence"),not("loirevalley"),not("champagne")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1fuf2vb">
           <text>"rose"</text>
         </outputEntry>
@@ -976,6 +674,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0uyptoe">
           <text>"rhonevalley","sicily"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tc5829">
+          <text>not("rhonevalley"),not("sicily")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1cxftj0">
           <text>"syrah"</text>
@@ -988,6 +689,9 @@
         <inputEntry id="UnaryTests_029g90u">
           <text>"bordeaux","tuscany"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1lwuxwp">
+          <text>not("bordeaux"),not("tuscany")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1b82uzi">
           <text>"merlot"</text>
         </outputEntry>
@@ -998,6 +702,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_11xhr8g">
           <text>"bordeaux","loirevalley","tuscany","veneto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15x5kki">
+          <text>not("bordeaux"),not("loirevalley"),not("tuscany"),not("veneto")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ggs7m1">
           <text>"cabernetfranc"</text>
@@ -1010,6 +717,9 @@
         <inputEntry id="UnaryTests_0k6dyd6">
           <text>"rioja","catalunia"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1vfld2x">
+          <text>not("rioja"),not("catalunia")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0rjxelk">
           <text>"viura"</text>
         </outputEntry>
@@ -1020,6 +730,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0kynk87">
           <text>"catalunia","veneto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02zl8md">
+          <text>not("veneto"),not("catalunia")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1yxglo3">
           <text>"pinotnoir"</text>
@@ -1032,6 +745,9 @@
         <inputEntry id="UnaryTests_007xjtr">
           <text>"bordeaux"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1ifq89c">
+          <text>not("bordeaux")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_053eaol">
           <text>"bordeuax"</text>
         </outputEntry>
@@ -1042,6 +758,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_06ezgu1">
           <text>"rhonevalley"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gxo4ar">
+          <text>not("rhonevalley")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tpyq98">
           <text>"rhone"</text>
@@ -1054,6 +773,9 @@
         <inputEntry id="UnaryTests_008wnuy">
           <text>"bordeaux"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1u94h1j">
+          <text>not("bordeaux")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0aoe3p4">
           <text>"northwest"</text>
         </outputEntry>
@@ -1065,106 +787,10 @@
         <inputEntry id="UnaryTests_0g1vby3">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_18o53ph">
+          <text>not("tuscany")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1yb9ank">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0eqj4sn">
-        <inputEntry id="UnaryTests_02iw4dq">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lczlsq">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_18bzx3h">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_15k52tp">
-        <inputEntry id="UnaryTests_127w448">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0g7cxtb">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0smo7ny">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0y16c30">
-        <inputEntry id="UnaryTests_1jhxjyr">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lnthcf">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0h94bwv">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1xbjzt3">
-        <inputEntry id="UnaryTests_0i2g6yd">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0bvgmhx">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1fv4z8u">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0bcw19r">
-        <inputEntry id="UnaryTests_03dchxt">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1byxadm">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ug4991">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1yhri96">
-        <inputEntry id="UnaryTests_0dm3ul6">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1utpp5o">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0jaeiuf">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0vxtjnw">
-        <inputEntry id="UnaryTests_1ca1vmn">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ca8tno">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_17fdy1u">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1jumcwh">
-        <inputEntry id="UnaryTests_0u6u4l7">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03l2ndw">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_05l8gey">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1tchd1e">
-        <inputEntry id="UnaryTests_1tv5xw5">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1vc8fn7">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0nlrge6">
           <text>"supertuscan"</text>
         </outputEntry>
       </rule>
@@ -1175,84 +801,10 @@
         <inputEntry id="UnaryTests_0yg5ose">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0j3fwrk">
+          <text>not("provence"),not("loirevalley"),not("champagne")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1e3yqma">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ya7s74">
-        <inputEntry id="UnaryTests_1ur2gdy">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gh0qbv">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ge46jj">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1fkxmtf">
-        <inputEntry id="UnaryTests_0uj96rd">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0je800q">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xz2zml">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1iilxpr">
-        <inputEntry id="UnaryTests_18lxn0z">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0iydocp">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0pv8jon">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_027ndfu">
-        <inputEntry id="UnaryTests_18dh0fv">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0j1cool">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0lrtexv">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_13ila98">
-        <inputEntry id="UnaryTests_04c9kew">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0m9oiri">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1vk1z0q">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1weiyu9">
-        <inputEntry id="UnaryTests_0jyhr9b">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xuvp9a">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0rn2w54">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_081cb9r">
-        <inputEntry id="UnaryTests_0sz2pi3">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0j3u6aa">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19ns7uq">
           <text>"rose"</text>
         </outputEntry>
       </rule>
@@ -1263,95 +815,10 @@
         <inputEntry id="UnaryTests_1uy8qvg">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1x4votd">
+          <text>not("rhonevalley"),not("sicily")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_06ld26w">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1eazk3j">
-        <inputEntry id="UnaryTests_1hz0wv8">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fq0koj">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0i3gt2l">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1enbw3m">
-        <inputEntry id="UnaryTests_1hbp29m">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0dra9sl">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1vv7x1h">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0o83z46">
-        <inputEntry id="UnaryTests_0umc885">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01so96g">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1cm9l0m">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b7zldx">
-        <inputEntry id="UnaryTests_0599w45">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0uhyg3f">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1guqkvq">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04tqudf">
-        <inputEntry id="UnaryTests_1feak5f">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1r36iz7">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1v7uu39">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0y71rd0">
-        <inputEntry id="UnaryTests_1iitn02">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fpgf7b">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1om5ci7">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0w4rkt2">
-        <inputEntry id="UnaryTests_0csgwzm">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jtot0y">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0m4h7vd">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1mmhbl6">
-        <inputEntry id="UnaryTests_1rsypw7">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1g2wrjj">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_17dohmp">
           <text>"syrah"</text>
         </outputEntry>
       </rule>
@@ -1362,95 +829,10 @@
         <inputEntry id="UnaryTests_13s61zq">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0y8a04q">
+          <text>not("bordeaux"),not("tuscany")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0cisjsx">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1vlh96u">
-        <inputEntry id="UnaryTests_1em81j7">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xanb62">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zh6lx7">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1abz6b2">
-        <inputEntry id="UnaryTests_0lxxa2y">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1tb183x">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0d1gp41">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0iyofyc">
-        <inputEntry id="UnaryTests_1owt7qe">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1o2y5zf">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0y6ezxs">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0q066np">
-        <inputEntry id="UnaryTests_0gjeeq3">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06yx0x4">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1sroa8z">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0b0plgl">
-        <inputEntry id="UnaryTests_0uj62pg">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zqrhbj">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1y09wfg">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04dz263">
-        <inputEntry id="UnaryTests_03x0gqx">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lyeqn2">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ge2vj2">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1l4ksrj">
-        <inputEntry id="UnaryTests_0r8qq7d">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0xs7kdh">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1mere73">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0o9t94g">
-        <inputEntry id="UnaryTests_040lq1a">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15sl2we">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0unv4fa">
           <text>"merlot"</text>
         </outputEntry>
       </rule>
@@ -1461,73 +843,10 @@
         <inputEntry id="UnaryTests_1jojpkh">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0h6lzi4">
+          <text>not("bordeaux"),not("loirevalley"),not("tuscany"),not("veneto")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0lkc3qp">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ns4vqn">
-        <inputEntry id="UnaryTests_1shmzu5">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09e5602">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07vqlnw">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0qk4pwf">
-        <inputEntry id="UnaryTests_1u1bfce">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1i8k96f">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1oa029p">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1yy5zsj">
-        <inputEntry id="UnaryTests_0k9rt7q">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hn6kkd">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0b9pkv3">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1rwrqka">
-        <inputEntry id="UnaryTests_0d226yp">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ui69bn">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0knbwlk">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b4wfm6">
-        <inputEntry id="UnaryTests_0my636d">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_13hn4n1">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0sggfay">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1wym3cg">
-        <inputEntry id="UnaryTests_1n5wz39">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0k9ej8e">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_18j6pce">
           <text>"cabernetfranc"</text>
         </outputEntry>
       </rule>
@@ -1538,95 +857,10 @@
         <inputEntry id="UnaryTests_05ywmfi">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0o670sm">
+          <text>not("rioja"),not("catalunia")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_16x1mea">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ujcccz">
-        <inputEntry id="UnaryTests_0zmsebr">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qmf841">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1slhkbn">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1us4ftn">
-        <inputEntry id="UnaryTests_1datx2o">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14z563z">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_14i7cnn">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1chora1">
-        <inputEntry id="UnaryTests_1vomubh">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1yqncbj">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1knim14">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0j9diwn">
-        <inputEntry id="UnaryTests_046mhuj">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zqhf49">
-          <text>not("lorevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1uwxk6g">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_00ll596">
-        <inputEntry id="UnaryTests_04cx3gz">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nhlwpd">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_04m8mbk">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04ydka2">
-        <inputEntry id="UnaryTests_0ulx679">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gvzvu4">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1g4sg7o">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_17lkzl7">
-        <inputEntry id="UnaryTests_1wsxfss">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ns9q44">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1hq854s">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_18fpeuf">
-        <inputEntry id="UnaryTests_0o8zjb0">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gjboix">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_17soym0">
           <text>"viura"</text>
         </outputEntry>
       </rule>
@@ -1637,95 +871,10 @@
         <inputEntry id="UnaryTests_0kcay5g">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_105uc00">
+          <text>not("veneto"),not("catalunia")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1n23rvt">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_02igcg0">
-        <inputEntry id="UnaryTests_0ll7l4w">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1f904qj">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ofahtd">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04p1xrb">
-        <inputEntry id="UnaryTests_13to7ex">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_13sf1qo">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1frfg5l">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1t0lrse">
-        <inputEntry id="UnaryTests_0c62ibr">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0aje80u">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1gmpl5m">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1n43i7o">
-        <inputEntry id="UnaryTests_1xyv0yh">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rv9dw1">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0bm07v8">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_09jlen4">
-        <inputEntry id="UnaryTests_1qj5as8">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0xpcif5">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07w55hc">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0s55hab">
-        <inputEntry id="UnaryTests_0a5b1t1">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_047pra6">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0lmfcb6">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_180cd5y">
-        <inputEntry id="UnaryTests_0pb7oro">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tl1c5p">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ncckfq">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0khkoc4">
-        <inputEntry id="UnaryTests_10kooas">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1kyinkg">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0qt092f">
           <text>"pinotnoir"</text>
         </outputEntry>
       </rule>
@@ -1736,106 +885,10 @@
         <inputEntry id="UnaryTests_0nq17hg">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0cfimil">
+          <text>not("bordeaux")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1i91b5b">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1snqdj4">
-        <inputEntry id="UnaryTests_0jlmt5r">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1yqsebr">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ehr6xf">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1qdx540">
-        <inputEntry id="UnaryTests_0v1htwc">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jw8t0v">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07iaz4q">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_16dkn39">
-        <inputEntry id="UnaryTests_0gchfuy">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05bab8e">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xzhq82">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0qtx6ht">
-        <inputEntry id="UnaryTests_1fdp6va">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1darqte">
-          <text>not("loreivalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ikloh0">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0a8tsoa">
-        <inputEntry id="UnaryTests_1jjjbzj">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fhaakr">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1rpbl3q">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04hesi2">
-        <inputEntry id="UnaryTests_09fh8n3">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10ft15f">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0hij4x1">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_105yvbs">
-        <inputEntry id="UnaryTests_0r1j91n">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mcfa33">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_00mudb8">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_05d3xql">
-        <inputEntry id="UnaryTests_1uerhbp">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0uubaru">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07x61o3">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_011jiim">
-        <inputEntry id="UnaryTests_122bjmz">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nhbrxh">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1hokovr">
           <text>"bordeaux"</text>
         </outputEntry>
       </rule>
@@ -1846,106 +899,10 @@
         <inputEntry id="UnaryTests_0broqyv">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1fm10go">
+          <text>not("rhonevalley")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0e8sqoy">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0eveb98">
-        <inputEntry id="UnaryTests_186ml3c">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ykeoe6">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0q5w0jr">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1uv9xwt">
-        <inputEntry id="UnaryTests_04wikbh">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jwriiu">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1rrfia4">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1betjby">
-        <inputEntry id="UnaryTests_03epc2z">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sycat6">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1dnp2vl">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1xsphto">
-        <inputEntry id="UnaryTests_0bp85x7">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0w3sqtr">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0u9jl2w">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gvrqe6">
-        <inputEntry id="UnaryTests_08kgeaj">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xgepy5">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0x3icqm">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_07djq7g">
-        <inputEntry id="UnaryTests_0jtbpxb">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0w1ayq4">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_120d6np">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0f3x7sr">
-        <inputEntry id="UnaryTests_1d37a5r">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_127fs0y">
-          <text>not("bordeaux")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_171r0y2">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0u96z74">
-        <inputEntry id="UnaryTests_0ktlta5">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18bghb4">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1mkfqbw">
-          <text>"rhone"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0slklfy">
-        <inputEntry id="UnaryTests_05oagz1">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17d5azx">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1cvxi6s">
           <text>"rhone"</text>
         </outputEntry>
       </rule>
@@ -1956,106 +913,10 @@
         <inputEntry id="UnaryTests_15a82b2">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0yaaulu">
+          <text>not("bordeaux")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1u32ta2">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1aygsrt">
-        <inputEntry id="UnaryTests_1jg6id3">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0r0ngcx">
-          <text>not("sicily")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0oqc78d">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0a9t59p">
-        <inputEntry id="UnaryTests_03hx6yz">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0a2t4cx">
-          <text>not("tuscany")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1udtvd6">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1w1cuul">
-        <inputEntry id="UnaryTests_1lx06gn">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_064brah">
-          <text>not("veneto")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1k4dtov">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_01slc28">
-        <inputEntry id="UnaryTests_0dt5xe0">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07frt00">
-          <text>not("loirevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_09bxt3f">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0mext5k">
-        <inputEntry id="UnaryTests_1412hw9">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1v2ugzo">
-          <text>not("champagne")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1a4mupw">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1918pqf">
-        <inputEntry id="UnaryTests_04bwg7k">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qga87m">
-          <text>not("provence")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1v2ki7n">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0t5eyk5">
-        <inputEntry id="UnaryTests_0pit54r">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14adphu">
-          <text>not("rioja")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0j19u10">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1l8e6u3">
-        <inputEntry id="UnaryTests_0pv0wqr">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09fynin">
-          <text>not("rhonevalley")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0pkdp5b">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1l89ivs">
-        <inputEntry id="UnaryTests_1gosd3m">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d0g2wd">
-          <text>not("catalunia")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1v4eqzx">
           <text>"northwest"</text>
         </outputEntry>
       </rule>
@@ -2067,6 +928,9 @@
     </informationRequirement>
     <informationRequirement id="InformationRequirement_18up2v8">
       <requiredDecision href="#Decision_0ouc24s" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0ogfpqh">
+      <requiredInput href="#InputData_1juvoq7" />
     </informationRequirement>
     <authorityRequirement id="AuthorityRequirement_0xyijpk">
       <requiredAuthority href="#KnowledgeSource_0qmpm5s" />
@@ -2080,6 +944,14 @@
           <text></text>
         </inputExpression>
       </input>
+      <input id="InputClause_10vu3jy" label="ExcludedGrapes">
+        <inputExpression id="LiteralExpression_1pzymg7" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_10gb8dj">
+          <text></text>
+        </inputValues>
+      </input>
       <output id="OutputClause_1sb6g9d" label="Wine" name="Wine" typeRef="string" />
       <rule id="DecisionRule_1vkg6ai">
         <inputEntry id="UnaryTests_0luqyj0">
@@ -2088,18 +960,10 @@
         <inputEntry id="UnaryTests_13yaz2a">
           <text>"merlot","cabernetfranc","syrah"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1v4xmd5">
+          <text>not("merlot"),not("cabernetfranc"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0bicjn7">
-          <text>"supertuscan"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ds597m">
-        <inputEntry id="UnaryTests_0zy13me">
-          <text>"supertuscan"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_009svf2">
-          <text>not("pinotnoir","viura")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0sfy3fp">
           <text>"supertuscan"</text>
         </outputEntry>
       </rule>
@@ -2110,18 +974,10 @@
         <inputEntry id="UnaryTests_08cpg92">
           <text>"viura","pinotnoir"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1r475xc">
+          <text>not("viura"),not("pinotnoir")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0enicmz">
-          <text>"rose"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_00d001i">
-        <inputEntry id="UnaryTests_1b7cs1k">
-          <text>"rose"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gtooyw">
-          <text>not("merlot","cabernetfranc","syrah")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0kcptfn">
           <text>"rose"</text>
         </outputEntry>
       </rule>
@@ -2132,18 +988,10 @@
         <inputEntry id="UnaryTests_1hbcxox">
           <text>"syrah"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_060e1ks">
+          <text>not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1jy316f">
-          <text>"syrah"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1nczmjq">
-        <inputEntry id="UnaryTests_1sm7ztv">
-          <text>"syrah"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1w8o8vj">
-          <text>not("merlot","cabernetfranc","viura","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0xe2gee">
           <text>"syrah"</text>
         </outputEntry>
       </rule>
@@ -2154,18 +1002,10 @@
         <inputEntry id="UnaryTests_1gl6a8o">
           <text>"merlot"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1wue9ch">
+          <text>not("merlot")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0zczol1">
-          <text>"merlot"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1vp2fvi">
-        <inputEntry id="UnaryTests_0fc4da4">
-          <text>"merlot"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0oqrly4">
-          <text>not("syrah","cabernetfranc","viura","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1kai6dl">
           <text>"merlot"</text>
         </outputEntry>
       </rule>
@@ -2176,18 +1016,10 @@
         <inputEntry id="UnaryTests_0ywlzev">
           <text>"cabernetfranc"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_003kufh">
+          <text>not("cabernetfranc")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0s4z7t5">
-          <text>"cabernetfranc"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_00dmf8n">
-        <inputEntry id="UnaryTests_1bd8xye">
-          <text>"cabernetfranc"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09n73on">
-          <text>not("merlot","syrah","viura","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0f677rd">
           <text>"cabernetfranc"</text>
         </outputEntry>
       </rule>
@@ -2198,18 +1030,10 @@
         <inputEntry id="UnaryTests_1ewy5pp">
           <text>"viura"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0bl08f4">
+          <text>not("viura")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0zsf481">
-          <text>"viura"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0pivkvp">
-        <inputEntry id="UnaryTests_1c1af8s">
-          <text>"viura"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0f23i6c">
-          <text>not("merlot","cabernetfranc","syrah","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_01ouv0t">
           <text>"viura"</text>
         </outputEntry>
       </rule>
@@ -2220,18 +1044,10 @@
         <inputEntry id="UnaryTests_0yoaf7s">
           <text>"pinotnoir"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_05aie98">
+          <text>not("pinotnoir")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0spyb4v">
-          <text>"pinotnoir"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b27syt">
-        <inputEntry id="UnaryTests_0jp2nrf">
-          <text>"pinotnoir"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wu6rmp">
-          <text>not("merlot","cabernetfranc","viura","syrah")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1iszlm6">
           <text>"pinotnoir"</text>
         </outputEntry>
       </rule>
@@ -2242,18 +1058,10 @@
         <inputEntry id="UnaryTests_0kmkpqm">
           <text>"cabernetfranc","merlot","syrah"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1mva0fg">
+          <text>not("merlot"),not("cabernetfranc"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1e0fm49">
-          <text>"bordeaux"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0ayquaf">
-        <inputEntry id="UnaryTests_1w91qa3">
-          <text>"bordeaux"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qa63he">
-          <text>not("viura","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_01ontcp">
           <text>"bordeaux"</text>
         </outputEntry>
       </rule>
@@ -2264,18 +1072,10 @@
         <inputEntry id="UnaryTests_1vfq03g">
           <text>"merlot","syrah"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_08ibths">
+          <text>not("merlot"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0eks5cp">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_020ddce">
-        <inputEntry id="UnaryTests_16g0ic2">
-          <text>"rhone"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15y9a1y">
-          <text>not("cabernetfranc","viura","pinotnoir")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_09imwmc">
           <text></text>
         </outputEntry>
       </rule>
@@ -2286,18 +1086,10 @@
         <inputEntry id="UnaryTests_11dxzi0">
           <text>"pinotnoir","syrah"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_08b1yi7">
+          <text>not("pinotnoir"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_19j2tkd">
-          <text>"northwest"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0f2rq7g">
-        <inputEntry id="UnaryTests_1bq7njb">
-          <text>"northwest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1y4f8bs">
-          <text>not("merlot","cabernetfranc","viura")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0wi9g6t">
           <text>"northwest"</text>
         </outputEntry>
       </rule>
@@ -2307,6 +1099,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0xduj4g">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kpck9e">
+          <text>not("merlot"),not("cabernetfranc"),not("syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0htw5b8">
           <text>"supertuscan"</text>
@@ -2319,6 +1114,9 @@
         <inputEntry id="UnaryTests_1jvglny">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_01ze5hl">
+          <text>not("viura"),not("pinotnoir")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0yu2fwn">
           <text>"rose"</text>
         </outputEntry>
@@ -2329,6 +1127,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1nwew0x">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y6rkco">
+          <text>not("syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18e1gqn">
           <text>"syrah"</text>
@@ -2341,6 +1142,9 @@
         <inputEntry id="UnaryTests_1g7y1w4">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1q8eu9p">
+          <text>not("merlot")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0vvd5zs">
           <text>"merlot"</text>
         </outputEntry>
@@ -2351,6 +1155,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1caw3po">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05yl1bo">
+          <text>not("cabernetfranc")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0sc0otv">
           <text>"cabernetfranc"</text>
@@ -2363,6 +1170,9 @@
         <inputEntry id="UnaryTests_0fl2dt5">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_009efh9">
+          <text>not("viura")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_04kmdu6">
           <text>"viura"</text>
         </outputEntry>
@@ -2373,6 +1183,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0yg6h1f">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d6h65b">
+          <text>not("pinotnoir")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04itk3s">
           <text>"pinotnoir"</text>
@@ -2385,6 +1198,9 @@
         <inputEntry id="UnaryTests_1s6xnec">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_138l164">
+          <text>not("merlot"),not("cabernetfranc"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1p8rnmi">
           <text>"bordeaux"</text>
         </outputEntry>
@@ -2396,6 +1212,9 @@
         <inputEntry id="UnaryTests_02xil8h">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0zdxdit">
+          <text>not("merlot"),not("syrah")</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0oh59st">
           <text>"rhone"</text>
         </outputEntry>
@@ -2406,6 +1225,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1sbc0xq">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ijvifd">
+          <text>not("pinotnoir"),not("syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0j0wilo">
           <text>"northwest"</text>
@@ -2697,6 +1519,10 @@
       </rule>
     </decisionTable>
   </decision>
+  <inputData id="InputData_1juvoq7" name="Excluded Grapes" />
+  <inputData id="InputData_1iha9p9" name="Excluded Dishes List" />
+  <inputData id="InputData_1dwyof2" name="Excluded Nations List" />
+  <inputData id="InputData_1mu90zs" name="Excluded Regions List" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape dmnElementRef="Decision_1ub7c7c">
@@ -2710,24 +1536,24 @@
         <di:waypoint x="300" y="840" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_078tdh5" dmnElementRef="InputData_00wtmje">
-        <dc:Bounds height="45" width="125" x="527" y="817" />
+        <dc:Bounds height="45" width="125" x="527" y="787" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_011875t" dmnElementRef="InformationRequirement_0dvgsg7">
-        <di:waypoint x="527" y="840" />
-        <di:waypoint x="500" y="840" />
-        <di:waypoint x="480" y="840" />
+        <di:waypoint x="527" y="810" />
+        <di:waypoint x="500" y="827" />
+        <di:waypoint x="480" y="827" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_1rb8dvf" dmnElementRef="KnowledgeSource_0e4ctmy">
         <dc:Bounds height="63" width="100" x="120" y="678" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_068io52" dmnElementRef="InputData_1s51kc1">
-        <dc:Bounds height="45" width="125" x="527" y="687" />
+        <dc:Bounds height="45" width="125" x="527" y="657" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0rhcjs3" dmnElementRef="KnowledgeSource_0rjlivo">
         <dc:Bounds height="63" width="100" x="120" y="558" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0r3uyx8" dmnElementRef="InputData_0ikwuj2">
-        <dc:Bounds height="45" width="125" x="527" y="567" />
+        <dc:Bounds height="45" width="125" x="527" y="537" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_1nn0ku3" dmnElementRef="InputData_02jxx30">
         <dc:Bounds height="45" width="125" x="527" y="407" />
@@ -2751,16 +1577,16 @@
         <dc:Bounds height="63" width="100" x="120" y="88" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_08oo0zt" dmnElementRef="InputData_00m4ex6">
-        <dc:Bounds height="45" width="125" x="527" y="97" />
+        <dc:Bounds height="45" width="125" x="527" y="110" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_1f75lki" dmnElementRef="AuthorityRequirement_0xyijpk">
         <di:waypoint x="220" y="120" />
         <di:waypoint x="300" y="119" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_1552kz8" dmnElementRef="InformationRequirement_1fax274">
-        <di:waypoint x="527" y="120" />
-        <di:waypoint x="500" y="120" />
-        <di:waypoint x="480" y="120" />
+        <di:waypoint x="527" y="133" />
+        <di:waypoint x="500" y="133" />
+        <di:waypoint x="480" y="133" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_09fv327" dmnElementRef="Decision_0ueqrsj">
         <dc:Bounds height="80" width="180" x="300" y="670" />
@@ -2772,14 +1598,14 @@
         <dc:Bounds height="80" width="180" x="300" y="80" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0edigaj" dmnElementRef="InformationRequirement_0r4ia45">
-        <di:waypoint x="527" y="710" />
-        <di:waypoint x="500" y="710" />
-        <di:waypoint x="480" y="710" />
+        <di:waypoint x="527" y="680" />
+        <di:waypoint x="500" y="697" />
+        <di:waypoint x="480" y="697" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_16ktb65" dmnElementRef="InformationRequirement_127f2wv">
-        <di:waypoint x="527" y="590" />
-        <di:waypoint x="500" y="590" />
-        <di:waypoint x="480" y="590" />
+        <di:waypoint x="527" y="560" />
+        <di:waypoint x="500" y="577" />
+        <di:waypoint x="480" y="577" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_0ygwoag" dmnElementRef="AuthorityRequirement_1t4ebe3">
         <di:waypoint x="220" y="710" />
@@ -2840,6 +1666,38 @@
         <di:waypoint x="390" y="320" />
         <di:waypoint x="390" y="180" />
         <di:waypoint x="390" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1kdlb0e" dmnElementRef="InputData_1juvoq7">
+        <dc:Bounds height="45" width="125" x="528" y="38" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_09ffpuo" dmnElementRef="InformationRequirement_0ogfpqh">
+        <di:waypoint x="528" y="61" />
+        <di:waypoint x="500" y="107" />
+        <di:waypoint x="480" y="107" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1bup85d" dmnElementRef="InputData_1iha9p9">
+        <dc:Bounds height="45" width="125" x="527" y="847" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_13g6hha" dmnElementRef="InformationRequirement_0lvl26y">
+        <di:waypoint x="527" y="870" />
+        <di:waypoint x="500" y="853" />
+        <di:waypoint x="480" y="853" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_048o8ai" dmnElementRef="InputData_1dwyof2">
+        <dc:Bounds height="45" width="125" x="528" y="718" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1petg4k" dmnElementRef="InformationRequirement_061fqge">
+        <di:waypoint x="528" y="741" />
+        <di:waypoint x="500" y="723" />
+        <di:waypoint x="480" y="723" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1uixidv" dmnElementRef="InputData_1mu90zs">
+        <dc:Bounds height="45" width="125" x="527" y="597" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0vcrcqf" dmnElementRef="InformationRequirement_0dcqmue">
+        <di:waypoint x="527" y="620" />
+        <di:waypoint x="500" y="603" />
+        <di:waypoint x="480" y="603" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
