@@ -372,7 +372,6 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#rose -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rose">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <name>Rose</name>
     </owl:NamedIndividual>
     
