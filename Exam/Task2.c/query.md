@@ -1,5 +1,5 @@
-The following query lists all the wines available:
-
+# The following query lists all wines available:
+```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX kebi: <urn:absolute:it.unicam.kebi.exam.task2.c#>
 
@@ -28,9 +28,10 @@ SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?d
 	?wine kebi:name ?winename.
 }
 ORDER BY ?winename
+```
 
-The following query lists all the wines that can be paired with "Beef":
-
+# The following query lists all the wines that can be paired with "Beef":
+```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX kebi: <urn:absolute:it.unicam.kebi.exam.task2.c#>
 
@@ -54,9 +55,10 @@ SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?d
 	?country kebi:name ?countryname.
 	?region kebi:name ?regionname.
 	?grape kebi:name ?grapename.
-    ?dish kebi:name "Beef".
+	?dish kebi:name "Beef".
 	?dish kebi:name ?dishname.
 	
 	?wine kebi:name ?winename.
 }
 ORDER BY ?winename
+```
