@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_15j7nn2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_15iul2y" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
   <decision id="Decision_1vu0ist" name="Decide Country">
     <informationRequirement id="InformationRequirement_1e3ynfr">
       <requiredInput href="#InputData_0435f7i" />
@@ -10,7 +10,7 @@
     <authorityRequirement id="AuthorityRequirement_1ndmrqo">
       <requiredAuthority href="#KnowledgeSource_085x5sv" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_1tg23j0">
+    <decisionTable id="DecisionTable_1tg23j0" hitPolicy="COLLECT">
       <input id="Input_1" label="Nation">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text>nation</text>
@@ -298,7 +298,7 @@
     <authorityRequirement id="AuthorityRequirement_02rseeu">
       <requiredAuthority href="#KnowledgeSource_1hcyi9r" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_1s2fzl1">
+    <decisionTable id="DecisionTable_1s2fzl1" hitPolicy="COLLECT">
       <input id="InputClause_1h5cl8a" label="Grapes">
         <inputExpression id="LiteralExpression_06on5d0" typeRef="string">
           <text>grapes</text>
@@ -318,7 +318,7 @@
           <text>not("merlot", "cabernetfranc", "syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1i4545u">
-          <text>"spertuscan"</text>
+          <text>"supertuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0zuztjl">
@@ -329,7 +329,7 @@
           <text>not("merlot", "cabernetfranc", "syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hk2dtw">
-          <text>"spertuscan"</text>
+          <text>"supertuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1werqdu">
@@ -340,7 +340,7 @@
           <text>not("merlot", "cabernetfranc", "syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uwc6dv">
-          <text>"spertuscan"</text>
+          <text>"supertuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0sc72i8">
@@ -351,7 +351,7 @@
           <text>not("merlot", "cabernetfranc", "syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uchzcl">
-          <text>"spertuscan"</text>
+          <text>"supertuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0wuj07t">
@@ -628,29 +628,29 @@
     <authorityRequirement id="AuthorityRequirement_1o7g8v4">
       <requiredAuthority href="#KnowledgeSource_0t6s4ka" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_195qofv">
+    <decisionTable id="DecisionTable_195qofv" hitPolicy="COLLECT">
       <input id="InputClause_09qgnko" label="Fruitness">
-        <inputExpression id="LiteralExpression_0q21ke0" typeRef="number">
+        <inputExpression id="LiteralExpression_0q21ke0" typeRef="integer">
           <text>fruitness</text>
         </inputExpression>
       </input>
       <input id="InputClause_1b4o3vl" label="Boldness">
-        <inputExpression id="LiteralExpression_0o277sy" typeRef="number">
+        <inputExpression id="LiteralExpression_0o277sy" typeRef="integer">
           <text>boldness</text>
         </inputExpression>
       </input>
       <input id="InputClause_08jbf8w" label="Savoriness">
-        <inputExpression id="LiteralExpression_0ilz6ix" typeRef="number">
+        <inputExpression id="LiteralExpression_0ilz6ix" typeRef="integer">
           <text>savoriness</text>
         </inputExpression>
       </input>
       <input id="InputClause_06iijxe" label="Dryness">
-        <inputExpression id="LiteralExpression_0i2au0j" typeRef="number">
+        <inputExpression id="LiteralExpression_0i2au0j" typeRef="integer">
           <text>dryness</text>
         </inputExpression>
       </input>
       <input id="InputClause_0yyaz8v" label="Tannity">
-        <inputExpression id="LiteralExpression_0r5zygt" typeRef="number">
+        <inputExpression id="LiteralExpression_0r5zygt" typeRef="integer">
           <text>tannity</text>
         </inputExpression>
       </input>
@@ -7067,7 +7067,7 @@
     <authorityRequirement id="AuthorityRequirement_1i5p7r4">
       <requiredAuthority href="#KnowledgeSource_1mzub48" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_0w5qj28">
+    <decisionTable id="DecisionTable_0w5qj28" hitPolicy="COLLECT">
       <input id="InputClause_0kjawr4" label="Region">
         <inputExpression id="LiteralExpression_1afw0cg" typeRef="string">
           <text>region</text>
@@ -7411,7 +7411,7 @@
     <authorityRequirement id="AuthorityRequirement_0iorwfg">
       <requiredAuthority href="#KnowledgeSource_00xbgc7" />
     </authorityRequirement>
-    <decisionTable id="DecisionTable_0n94ppd">
+    <decisionTable id="DecisionTable_0n94ppd" hitPolicy="COLLECT">
       <input id="InputClause_073gdwp" label="Dish">
         <inputExpression id="LiteralExpression_0mah9p9" typeRef="string">
           <text>dish</text>
@@ -7749,28 +7749,28 @@
     <informationRequirement id="InformationRequirement_13t5o90">
       <requiredDecision href="#Decision_1gwyybp" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_11rabgb">
-      <input id="InputClause_0zg92rw" label="SuggestedWineForGrapes">
+    <decisionTable id="DecisionTable_11rabgb" hitPolicy="COLLECT">
+      <input id="InputClause_0zg92rw" label="SuggestedWineForGrapes" camunda:inputVariable="input">
         <inputExpression id="LiteralExpression_0o0ww29" typeRef="string">
           <text>suggestedwineforgrapes</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1q09o0s" label="SuggestedWineForTaste">
+      <input id="InputClause_1q09o0s" label="SuggestedWineForTaste" camunda:inputVariable="input">
         <inputExpression id="LiteralExpression_1m5n98x" typeRef="string">
           <text>suggestedwinefortaste</text>
         </inputExpression>
       </input>
-      <input id="InputClause_07njqso" label="SuggestedWineForRegion">
+      <input id="InputClause_07njqso" label="SuggestedWineForRegion" camunda:inputVariable="input">
         <inputExpression id="LiteralExpression_0ja6w9q" typeRef="string">
           <text>suggestedwineforregion</text>
         </inputExpression>
       </input>
-      <input id="InputClause_09wbfb4" label="SuggestedWineForCountry">
+      <input id="InputClause_09wbfb4" label="SuggestedWineForCountry" camunda:inputVariable="input">
         <inputExpression id="LiteralExpression_15uvc70" typeRef="string">
           <text>suggestedwineforcountry</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1of1uek" label="SuggestedWineForDish">
+      <input id="InputClause_1of1uek" label="SuggestedWineForDish" camunda:inputVariable="input">
         <inputExpression id="LiteralExpression_1m44yp7" typeRef="string">
           <text>suggestedwinefordish</text>
         </inputExpression>
@@ -7778,19 +7778,19 @@
       <output id="OutputClause_10fo2zx" label="SuggestedWine" name="suggestedwine" typeRef="string" />
       <rule id="DecisionRule_0eeerlp">
         <inputEntry id="UnaryTests_0t2ibsd">
-          <text>"supertuscan"</text>
+          <text>contains(input, "supertuscan")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0l9i98z">
-          <text>"supertuscan"</text>
+          <text>contains(input, "supertuscan")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ephf7n">
-          <text>"supertuscan"</text>
+          <text>contains(input, "supertuscan")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jud43v">
-          <text>"supertuscan"</text>
+          <text>contains(input, "supertuscan")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hon741">
-          <text>"supertuscan"</text>
+          <text>contains(input, "supertuscan")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00urtyu">
           <text>"supertuscan"</text>
@@ -7798,19 +7798,19 @@
       </rule>
       <rule id="DecisionRule_0j1mlja">
         <inputEntry id="UnaryTests_0uj8aqu">
-          <text>"syrah"</text>
+          <text>contains(input, "syrah")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bgxx2f">
-          <text>"syrah"</text>
+          <text>contains(input, "syrah")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i933fc">
-          <text>"syrah"</text>
+          <text>contains(input, "syrah")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1l6r53f">
-          <text>"syrah"</text>
+          <text>contains(input, "syrah")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0l4qrop">
-          <text>"syrah"</text>
+          <text>contains(input, "syrah")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1eilvn1">
           <text>"syrah"</text>
@@ -7818,19 +7818,19 @@
       </rule>
       <rule id="DecisionRule_01onz7l">
         <inputEntry id="UnaryTests_0quxbjw">
-          <text>"bordeaux"</text>
+          <text>contains(input, "bordeaux")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1td9wss">
-          <text>"bordeaux"</text>
+          <text>contains(input, "bordeaux")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u5hqre">
-          <text>"bordeaux"</text>
+          <text>contains(input, "bordeaux")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1d68vnt">
-          <text>"bordeaux"</text>
+          <text>contains(input, "bordeaux")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_15tdm57">
-          <text>"bordeaux"</text>
+          <text>contains(input, "bordeaux")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pglnxp">
           <text>"bordeaux"</text>
@@ -7838,19 +7838,19 @@
       </rule>
       <rule id="DecisionRule_1k73mc7">
         <inputEntry id="UnaryTests_09a5g2b">
-          <text>"rhone"</text>
+          <text>contains(input, "rhone")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04d5zdw">
-          <text>"rhone"</text>
+          <text>contains(input, "rhone")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0upytp0">
-          <text>"rhone"</text>
+          <text>contains(input, "rhone")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uwx4j5">
-          <text>"rhone"</text>
+          <text>contains(input, "rhone")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a1b9es">
-          <text>"rhone"</text>
+          <text>contains(input, "rhone")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0yq73ui">
           <text>"rhone"</text>
@@ -7858,19 +7858,19 @@
       </rule>
       <rule id="DecisionRule_0knxqpg">
         <inputEntry id="UnaryTests_10050j9">
-          <text>"rose"</text>
+          <text>contains(input, "rose")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ugo94q">
-          <text>"rose"</text>
+          <text>contains(input, "rose")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_01kbzry">
-          <text>"rose"</text>
+          <text>contains(input, "rose")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rfdfgi">
-          <text>"rose"</text>
+          <text>contains(input, "rose")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0h3reks">
-          <text>"rose"</text>
+          <text>contains(input, "rose")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pkmk1b">
           <text>"rose"</text>
@@ -7878,19 +7878,19 @@
       </rule>
       <rule id="DecisionRule_03ago8u">
         <inputEntry id="UnaryTests_0w3lf4c">
-          <text>"viura"</text>
+          <text>contains(input, "viura")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0utr01g">
-          <text>"viura"</text>
+          <text>contains(input, "viura")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1b2582c">
-          <text>"viura"</text>
+          <text>contains(input, "viura")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04ldepo">
-          <text>"viura"</text>
+          <text>contains(input, "viura")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rxtbp9">
-          <text>"viura"</text>
+          <text>contains(input, "viura")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1uwtxni">
           <text>"viura"</text>
@@ -7898,19 +7898,19 @@
       </rule>
       <rule id="DecisionRule_08lyaxx">
         <inputEntry id="UnaryTests_0xj8pha">
-          <text>"pinotnoir"</text>
+          <text>contains(input, "pinotnoir")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0b710u1">
-          <text>"pinotnoir"</text>
+          <text>contains(input, "pinotnoir")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uzvr0p">
-          <text>"pinotnoir"</text>
+          <text>contains(input, "pinotnoir")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_16urxa0">
-          <text>"pinotnoir"</text>
+          <text>contains(input, "pinotnoir")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kwxygw">
-          <text>"pinotnoir"</text>
+          <text>contains(input, "pinotnoir")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0qrz7rt">
           <text>"pinotnoir"</text>
@@ -7918,19 +7918,19 @@
       </rule>
       <rule id="DecisionRule_1e5c7vc">
         <inputEntry id="UnaryTests_0bq6y3p">
-          <text>"northwest"</text>
+          <text>contains(input, "northwest")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1quogtf">
-          <text>"northwest"</text>
+          <text>contains(input, "northwest")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00m0l31">
-          <text>"northwest"</text>
+          <text>contains(input, "northwest")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bq1wmt">
-          <text>"northwest"</text>
+          <text>contains(input, "northwest")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ql4exi">
-          <text>"northwest"</text>
+          <text>contains(input, "northwest")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03465mw">
           <text>"northwest"</text>
@@ -7938,19 +7938,19 @@
       </rule>
       <rule id="DecisionRule_0dnmhxp">
         <inputEntry id="UnaryTests_0olxv6o">
-          <text>"merlot"</text>
+          <text>contains(input, "merlot")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jqiz3q">
-          <text>"merlot"</text>
+          <text>contains(input, "merlot")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0b7ay0q">
-          <text>"merlot"</text>
+          <text>contains(input, "merlot")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0y7ycay">
-          <text>"merlot"</text>
+          <text>contains(input, "merlot")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w3hecl">
-          <text>"merlot"</text>
+          <text>contains(input, "merlot")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10wfwi3">
           <text>"merlot"</text>
@@ -7958,19 +7958,19 @@
       </rule>
       <rule id="DecisionRule_1efvagn">
         <inputEntry id="UnaryTests_1v2q7js">
-          <text>"cabernetfranc"</text>
+          <text>contains(input, "cabernetfranc")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04rbf31">
-          <text>"cabernetfranc"</text>
+          <text>contains(input, "cabernetfranc")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bfgb3m">
-          <text>"cabernetfranc"</text>
+          <text>contains(input, "cabernetfranc")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0updhul">
-          <text>"cabernetfranc"</text>
+          <text>contains(input, "cabernetfranc")</text>
         </inputEntry>
         <inputEntry id="UnaryTests_19k9x30">
-          <text>"cabernetfranc"</text>
+          <text>contains(input, "cabernetfranc")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1esv9sw">
           <text>"cabernetfranc"</text>
