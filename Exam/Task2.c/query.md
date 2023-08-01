@@ -3,7 +3,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX kebi: <urn:absolute:it.unicam.kebi.exam.task2.c#>
 
-SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?dishname ?winename WHERE {
+SELECT ?country ?region ?grape ?fruity ?bold ?savory ?dry ?tannin ?dish ?wine WHERE {
 	?country rdf:type kebi:country.
 	?region rdf:type kebi:region.
 	?region kebi:belongs_to ?country.
@@ -19,15 +19,8 @@ SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?d
 	?wine kebi:savory ?savory.
 	?wine kebi:dry ?dry.
 	?wine kebi:tannin ?tannin.
-	
-	?country kebi:name ?countryname.
-	?region kebi:name ?regionname.
-	?grape kebi:name ?grapename.
-	?dish kebi:name ?dishname.
-	
-	?wine kebi:name ?winename.
 }
-ORDER BY ?winename
+ORDER BY ?wine
 ```
 
 # The following query lists all the wines that can be paired with "Beef":
@@ -35,7 +28,7 @@ ORDER BY ?winename
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX kebi: <urn:absolute:it.unicam.kebi.exam.task2.c#>
 
-SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?dishname ?winename WHERE {
+SELECT ?country ?region ?grape ?fruity ?bold ?savory ?dry ?tannin ?dish ?wine WHERE {
 	?country rdf:type kebi:country.
 	?region rdf:type kebi:region.
 	?region kebi:belongs_to ?country.
@@ -52,13 +45,10 @@ SELECT ?countryname ?regionname ?grapename ?fruity ?bold ?savory ?dry ?tannin ?d
 	?wine kebi:dry ?dry.
 	?wine kebi:tannin ?tannin.
 	
-	?country kebi:name ?countryname.
-	?region kebi:name ?regionname.
-	?grape kebi:name ?grapename.
-	?dish kebi:name "Beef".
-	?dish kebi:name ?dishname.
-	
-	?wine kebi:name ?winename.
+	FILTER(
+		?dish = kebi:beef &&
+		?bold = 5
+	)
 }
-ORDER BY ?winename
+ORDER BY ?wine
 ```
