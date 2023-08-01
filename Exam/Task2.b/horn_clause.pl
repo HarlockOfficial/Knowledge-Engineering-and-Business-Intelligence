@@ -2,17 +2,17 @@
 :- ensure_loaded(knowledge_base).
 
 % COUNTRY, REGION, GRAPE and DISH are passed as lists
-query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, WINE) :- 
-    validcountry(COUNTRY), 
-    validcountry(NOTCOUNTRY), 
+query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, WINE) :-
+    validcountry(COUNTRY),
+    validcountry(NOTCOUNTRY),
     validregion(REGION, COUNTRY),
     existregion(NOTREGION),
-    validgrape(GRAPE), 
-    validgrape(NOTGRAPE), 
-    validdish(DISH),  
-    validdish(NOTDISH),  
-    fruity(X, FRUITY), 
-    bold(X, BOLD), 
+    validgrape(GRAPE),
+    validgrape(NOTGRAPE),
+    validdish(DISH),
+    validdish(NOTDISH),
+    fruity(X, FRUITY),
+    bold(X, BOLD),
     savory(X, SAVORY),
     dry(X, DRY),
     tannin(X, TANNIN),
@@ -26,15 +26,15 @@ query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTR
 
 
 softened_query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, WINE, THRESHOLD) :-
-    validcountry(COUNTRY), 
-    validcountry(NOTCOUNTRY), 
+    validcountry(COUNTRY),
+    validcountry(NOTCOUNTRY),
     validregion(REGION, COUNTRY),
     existregion(NOTREGION),
-    validgrape(GRAPE), 
-    validgrape(NOTGRAPE), 
-    validdish(DISH),  
-    validdish(NOTDISH),  
-    fruity(X, Y), Y - THRESHOLD =< FRUITY, FRUITY =< Y + THRESHOLD, 
+    validgrape(GRAPE),
+    validgrape(NOTGRAPE),
+    validdish(DISH),
+    validdish(NOTDISH),
+    fruity(X, Y), Y - THRESHOLD =< FRUITY, FRUITY =< Y + THRESHOLD,
     bold(X, Z), Z - THRESHOLD =< BOLD, BOLD =< Z + THRESHOLD,
     savory(X, W), W - THRESHOLD =< SAVORY, SAVORY =< W + THRESHOLD,
     dry(X, H), H - THRESHOLD =< DRY, DRY =< H + THRESHOLD,
@@ -60,26 +60,26 @@ existregion([]).
 existregion([H|T]):- region(H,_), existregion(T).
 
 validregion([], []).
-validregion([], COUNTRYLIST).
-validregion(REGIONLIST, []).
+validregion([], _).
+validregion(_, []).
 validregion([H|T], [A|B]):- region(H, A), validregion(T, B).
-validregion([H|T], [A|B]):- region(H, A), validregion(H, B).
-validregion([H|T], [A|B]):- region(H, A), validregion(T, A).
+validregion([H|_], [A|B]):- region(H, A), validregion(H, B).
+validregion([H|T], [A|_]):- region(H, A), validregion(T, A).
 
-findwinenotbelongs(WINE, [H|T]):- not(winebelongs(WINE, H)).
-findwinenotbelongs(WINE, [H|T]):- findwinenotbelongs(WINE, T).
+findwinenotbelongs(WINE, [H|_]):- not(winebelongs(WINE, H)).
+findwinenotbelongs(WINE, [_|T]):- findwinenotbelongs(WINE, T).
 
-findwinebelongs(WINE, [H|T]):- winebelongs(WINE, H).
-findwinebelongs(WINE, [H|T]):- findwinebelongs(WINE, T).
+findwinebelongs(WINE, [H|_]):- winebelongs(WINE, H).
+findwinebelongs(WINE, [_|T]):- findwinebelongs(WINE, T).
 
-notfindwine(WINE, []).
+notfindwine(_, []).
 notfindwine(WINE, [H|T]):- not(containsgrape(WINE,H)), notfindwine(WINE,T).
 
-findwine(WINE, []).
+findwine(_, []).
 findwine(WINE, [H|T]):- containsgrape(WINE, H), findwine(WINE, T).
 
-notfinddish(WINE, [H|T]):- not(wineusedwith(WINE, H)).
-notfinddish(WINE, [H|T]):- notfinddish(WINE,T).
+notfinddish(WINE, [H|_]):- not(wineusedwith(WINE, H)).
+notfinddish(WINE, [_|T]):- notfinddish(WINE,T).
 
-finddish(WINE, [H|T]):- wineusedwith(WINE, H).
-finddish(WINE, [H|T]):- finddish(WINE, T).
+finddish(WINE, [H|_]):- wineusedwith(WINE, H).
+finddish(WINE, [_|T]):- finddish(WINE, T).
