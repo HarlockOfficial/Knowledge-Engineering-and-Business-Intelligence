@@ -103,20 +103,6 @@
     
 
 
-    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#name -->
-
-    <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
-        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
-        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#savory -->
 
     <owl:DatatypeProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#savory">
@@ -172,6 +158,24 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#meat -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#meat">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#red -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#red">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+        <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#red_wine -->
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine">
@@ -185,6 +189,39 @@
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#region">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#seafood -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#seafood">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#seconddish -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#sidedish -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#white -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#white">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
     </owl:Class>
     
 
@@ -219,8 +256,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#beef -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#beef">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <name>Beef</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
     </owl:NamedIndividual>
     
 
@@ -230,15 +266,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
-        <name>bordeaux</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc">
-        <name>Cabernet Franc</name>
     </owl:NamedIndividual>
     
 
@@ -248,7 +275,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
-        <name>Catalunia</name>
     </owl:NamedIndividual>
     
 
@@ -258,7 +284,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#champagne">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
-        <name>Champagne</name>
     </owl:NamedIndividual>
     
 
@@ -266,8 +291,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#crab -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#crab">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <name>Crab</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
     </owl:NamedIndividual>
     
 
@@ -276,7 +300,6 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#france">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
-        <name>France</name>
     </owl:NamedIndividual>
     
 
@@ -285,7 +308,6 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#italy">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
-        <name>Italy</name>
     </owl:NamedIndividual>
     
 
@@ -295,7 +317,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#levante">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
-        <name>Levante</name>
     </owl:NamedIndividual>
     
 
@@ -305,7 +326,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
-        <name>Loire Valley</name>
     </owl:NamedIndividual>
     
 
@@ -313,8 +333,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <name>Maitake Mushroom</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
     </owl:NamedIndividual>
     
 
@@ -324,7 +343,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#marches">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
-        <name>Marches</name>
     </owl:NamedIndividual>
     
 
@@ -332,8 +350,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#merlot -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#merlot">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-        <name>Merlot</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
     </owl:NamedIndividual>
     
 
@@ -341,17 +358,15 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#parmesan -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <name>Parmesan</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoire -->
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoire">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-        <name>Pinot Noire</name>
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
     </owl:NamedIndividual>
     
 
@@ -361,7 +376,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#provence">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
-        <name>Provence</name>
     </owl:NamedIndividual>
     
 
@@ -371,7 +385,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rhonevalley">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
-        <name>Rhone Valley</name>
     </owl:NamedIndividual>
     
 
@@ -381,15 +394,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rioja">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
-        <name>Rioja</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#rose -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rose">
-        <name>Rose</name>
     </owl:NamedIndividual>
     
 
@@ -399,7 +403,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#sicily">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
-        <name>Sicily</name>
     </owl:NamedIndividual>
     
 
@@ -408,7 +411,6 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#spain">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
-        <name>Spain</name>
     </owl:NamedIndividual>
     
 
@@ -416,8 +418,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#syrah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#syrah">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-        <name>Syrah</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
     </owl:NamedIndividual>
     
 
@@ -425,8 +426,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#turkey -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#turkey">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
-        <name>Turkey</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
     </owl:NamedIndividual>
     
 
@@ -436,7 +436,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
-        <name>Tuscany</name>
     </owl:NamedIndividual>
     
 
@@ -446,7 +445,6 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#veneto">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
-        <name>Veneto</name>
     </owl:NamedIndividual>
     
 
@@ -454,8 +452,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#viura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#viura">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
-        <name>Viura</name>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white"/>
     </owl:NamedIndividual>
     
 
@@ -465,14 +462,12 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
-        <name>Bordeaux</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</tannin>
     </owl:NamedIndividual>
@@ -487,12 +482,10 @@
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#veneto"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
-        <name>Cabernet Franc</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</tannin>
     </owl:NamedIndividual>
@@ -510,7 +503,6 @@
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Merlot</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</tannin>
     </owl:NamedIndividual>
@@ -522,33 +514,31 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoire"/>
+        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Northwest</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</tannin>
     </owl:NamedIndividual>
     
 
 
-    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoire -->
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoire">
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#veneto"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoire"/>
+        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Pinot Noire</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</tannin>
     </owl:NamedIndividual>
@@ -566,7 +556,6 @@
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Rhone</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</tannin>
     </owl:NamedIndividual>
@@ -580,13 +569,12 @@
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#champagne"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#provence"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoire"/>
+        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#viura"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</fruity>
-        <name>Rose</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</tannin>
     </owl:NamedIndividual>
@@ -598,14 +586,12 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
-        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Supertuscan</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</tannin>
     </owl:NamedIndividual>
@@ -624,7 +610,6 @@
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
-        <name>Syrah</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</tannin>
     </owl:NamedIndividual>
@@ -643,7 +628,6 @@
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
-        <name>Viura</name>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</tannin>
     </owl:NamedIndividual>
