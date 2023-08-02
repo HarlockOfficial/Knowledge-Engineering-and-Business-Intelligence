@@ -1,0 +1,23 @@
+PREFIX kebi: <urn:absolute:it.unicam.kebi.exam.task2.c#>
+
+SELECT ?country ?region ?grape ?fruity ?bold ?savory ?dry ?tannin ?dish ?wine WHERE {{
+	?country rdf:type kebi:country.
+	?region rdf:type kebi:region.
+	?region kebi:belongs_to ?country.
+
+	?wine kebi:belongs_to_region ?region.
+	?wine kebi:contains_grape ?grape.
+	?wine kebi:paired_with ?dish.
+
+	?wine kebi:fruity ?fruity.
+	?wine kebi:bold ?bold.
+	?wine kebi:savory ?savory.
+	?wine kebi:dry ?dry.
+	?wine kebi:tannin ?tannin.
+
+	FILTER(
+		?dish = {DISH} &&
+		?bold >= {BOLDNESS} - {THRESHOLD} && ?bold <= {BOLDNESS} + {THRESHOLD}
+	)
+}}
+ORDER BY ?wine
