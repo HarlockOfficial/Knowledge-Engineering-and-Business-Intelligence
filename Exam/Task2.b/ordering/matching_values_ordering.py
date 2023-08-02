@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser.add_argument('--results_key', type=str, default='WINE', help='name of the column containing the most important result of the query')
     parser.add_argument('--obtain_results', action='store_true', help='if true, the query will be executed and the results will be saved in a json file')
     parser.add_argument('--fix_results', action='store_true', help='if true, the ordered list will be extracted from the query result json file')
-    parser.add_argument('kwargs', type=json.loads, default="{\"COUNTRY\": [\"italy\"], \"REGION\": [\"REGION\"], \"GRAPE\": [\"GRAPE\"], \"DISH\": [\"DISH\"], \"NOTCOUNTRY\": [\"NOTCOUNTRY\"], \"NOTREGION\": [\"NOTREGION\"], \"NOTGRAPE\": [\"NOTGRAPE\"], \"NOTDISH\": [\"NOTDISH\"], \"THRESHOLD\": [0, 1, 2], \"FRUITY\": 3, \"BOLD\": 3, \"SAVORY\": 3, \"DRY\": 3, \"TANNIN\": 3}", help='dictionary containing the parameters for the query')
+    parser.add_argument('--kwargs', type=json.loads, default="{\"COUNTRY\": [\"italy\"], \"REGION\": [\"REGION\"], \"GRAPE\": [\"GRAPE\"], \"DISH\": [\"DISH\"], \"NOTCOUNTRY\": [\"NOTCOUNTRY\"], \"NOTREGION\": [\"NOTREGION\"], \"NOTGRAPE\": [\"NOTGRAPE\"], \"NOTDISH\": [\"NOTDISH\"], \"THRESHOLD\": [0, 1, 2], \"FRUITY\": 3, \"BOLD\": 3, \"SAVORY\": 3, \"DRY\": 3, \"TANNIN\": 3}", help='dictionary containing the parameters for the query')
 
     args = parser.parse_args()
 
