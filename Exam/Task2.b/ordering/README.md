@@ -9,6 +9,8 @@ To do so, run:
 ```
 pip3 install -r requirements.txt
 ```
+Other than the python dependencies, it is necessary to have SWI-Prolog installed on the machine.
+Is possible to use as a reference this [link](https://www.swi-prolog.org/packages/mqi/prologmqi.html) where all the installation steps are explained.
 
 To execute the file, run: 
 ```
