@@ -70,6 +70,10 @@ def find_query_to_call(path_to_prolog_file_with_query_definition: str, query_fun
 def prepare_query(query_to_call: str, **kwargs) -> str:
     # Replace the parameters in the query with the values from kwargs
     for key, value in kwargs.items():
+        if isinstance(value, list) and any([isinstance(elem, tuple) for elem in value]):
+            for index, elem in enumerate(value):
+                if isinstance(elem, tuple):
+                    value[index] = elem[0]
         decoded_value = str(value).encode('utf-8', 'ignore').decode('utf-8', 'ignore')
         query_to_call = re.sub(r'\b' + key + r'\b', decoded_value, query_to_call)
 

@@ -6,7 +6,7 @@ query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTR
     validcountry(COUNTRY),
     validcountry(NOTCOUNTRY),
     validregion(REGION, COUNTRY),
-    existregion(NOTREGION),
+    validregion(NOTREGION, NOTCOUNTRY),
     validgrape(GRAPE),
     validgrape(NOTGRAPE),
     validdish(DISH),
@@ -29,7 +29,7 @@ softened_query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, 
     validcountry(COUNTRY),
     validcountry(NOTCOUNTRY),
     validregion(REGION, COUNTRY),
-    existregion(NOTREGION),
+    validregion(NOTREGION, NOTCOUNTRY),
     validgrape(GRAPE),
     validgrape(NOTGRAPE),
     validdish(DISH),
@@ -56,9 +56,6 @@ validdish([H|T]):- dish(H), validdish(T).
 validcountry([]).
 validcountry([H|T]) :- country(H), validcountry(T).
 
-existregion([]).
-existregion([H|T]):- region(H,_), existregion(T).
-
 validregion([], []).
 validregion([], _).
 validregion(_, []).
@@ -66,8 +63,8 @@ validregion([H|T], [A|B]):- region(H, A), validregion(T, B).
 validregion([H|_], [A|B]):- region(H, A), validregion(H, B).
 validregion([H|T], [A|_]):- region(H, A), validregion(T, A).
 
-findwinenotbelongs(WINE, [H|_]):- not(winebelongs(WINE, H)).
-findwinenotbelongs(WINE, [_|T]):- findwinenotbelongs(WINE, T).
+findwinenotbelongs(_, []).
+findwinenotbelongs(WINE, [H|T]):- not(winebelongs(WINE, H)), findwinenotbelongs(WINE, T).
 
 findwinebelongs(WINE, [H|_]):- winebelongs(WINE, H).
 findwinebelongs(WINE, [_|T]):- findwinebelongs(WINE, T).
