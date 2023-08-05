@@ -6,8 +6,28 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:kebi="urn:absolute:it.unicam.kebi.exam.task2.c#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -26,6 +46,7 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#has_region"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
     </owl:ObjectProperty>
@@ -36,6 +57,7 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to_region">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region_produces"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
     </owl:ObjectProperty>
@@ -46,8 +68,43 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#contains_grape">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#is_contained"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#has_region -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#has_region">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#is_contained -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_contained">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#is_paired_with -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_paired_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#paired_with"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#is_produced -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_produced">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#produces"/>
     </owl:ObjectProperty>
     
 
@@ -58,6 +115,24 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#produces -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#produces">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#region_produces -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#region_produces">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -631,6 +706,73 @@
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
         <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</tannin>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#reg">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#coun">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#win">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Match Country with produced wines</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#reg"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#coun"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#belongs_to_region"/>
+                                <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                                <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#reg"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#produces"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#coun"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 
