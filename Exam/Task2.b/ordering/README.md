@@ -5,7 +5,7 @@ The first file is used to order the values of the knowledgebase, the second file
 The main interaction points is provided by the first file.
 
 To execute it, is necessary to install the required dependencies present in requirements.txt.
-To do so, run:
+To do so, open a terminal within the folder containing this file and run:
 ```
 pip3 install -r requirements.txt
 ```
@@ -14,7 +14,7 @@ Is possible to use as a reference this [link](https://www.swi-prolog.org/package
 
 To execute the file, run: 
 ```
-python3 matching_values_ordering.py --obtain_results --fix_results "{\"COUNTRY\": [\"italy\"], \"REGION\": [\"REGION\"], \"GRAPE\": [\"GRAPE\"], \"DISH\": [\"DISH\"], \"NOTCOUNTRY\": [\"NOTCOUNTRY\"], \"NOTREGION\": [\"NOTREGION\"], \"NOTGRAPE\": [\"NOTGRAPE\"], \"NOTDISH\": [\"NOTDISH\"], \"THRESHOLD\": [0, 1, 2], \"FRUITY\": 3, \"BOLD\": 3, \"SAVORY\": 3, \"DRY\": 3, \"TANNIN\": 3}"
+python3 matching_values_ordering.py --obtain_results --fix_results --kwargs "{\"DISH\": \"\", \"THRESHOLD\": [0, 1, 2], \"BOLDNESS\": 3}"
 ```
 
 Other parameters are also present to provide freedom to the user.
