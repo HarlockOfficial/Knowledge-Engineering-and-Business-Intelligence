@@ -2,7 +2,7 @@ import json
 
 from owlready2 import World
 
-from ordering import OWLManager
+import OWLManager
 
 
 def run_query(query_world: World, query_content: str):
@@ -44,7 +44,6 @@ def merge_results(input_list: list):
 
 def execute_query(input_file, query_file, kwargs):
     thresholds = kwargs['THRESHOLD'].copy()
-
     world = OWLManager.create_world(input_file)
     ordered_output = list()
     for value in thresholds:
@@ -87,7 +86,6 @@ if __name__ == '__main__':
     parser.add_argument('--kwargs', type=json.loads, help='dictionary containing the parameters for the query_content \nNOTE:the dictionary keys must match the values in the results_ordering_mechanism list')
 
     args = parser.parse_args()
-
     ordered_response = execute_query(args.input, args.query_file, args.kwargs)
     string_response = to_string(ordered_response)
     with open("query_results.json", "w") as f:

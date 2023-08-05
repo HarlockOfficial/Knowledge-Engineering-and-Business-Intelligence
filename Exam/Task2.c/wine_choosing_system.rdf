@@ -629,7 +629,7 @@
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
         <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</savory>
-        <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</tannin>
+        <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</tannin>
     </owl:NamedIndividual>
 </rdf:RDF>
 
