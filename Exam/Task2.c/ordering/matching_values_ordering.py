@@ -49,6 +49,7 @@ def execute_query(input_file, query_file, kwargs):
     for value in thresholds:
         kwargs['THRESHOLD'] = value
         query_content = prepare_query_content(query_file, **kwargs)
+        print("Running query with args: {}".format(kwargs))
         results = run_query(world, query_content)
         results = merge_results(results)
         ordered_output.append(results)
