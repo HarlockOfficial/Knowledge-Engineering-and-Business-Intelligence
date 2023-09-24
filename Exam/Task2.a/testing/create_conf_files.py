@@ -1,6 +1,6 @@
 import itertools
 import os
-from typing import Set, Dict, Tuple, List, Union
+from typing import Set, Dict, Tuple, List
 
 from xml.etree import ElementTree as ET
 
@@ -9,7 +9,7 @@ from testing.extract_xml import extract_xml
 
 def find_all_values(element: ET.Element) -> str:
     """
-        Having a xml in the form:
+        Having an xml in the form:
         <input id="Input_1" label="Nation">
             <inputExpression id="InputExpression_1" typeRef="string">
                 <text>nation</text>
@@ -31,10 +31,7 @@ def find_all_values(element: ET.Element) -> str:
 
 
 def extract_keys_and_values_dict(decision: ET.Element, namespace: str):
-    try:
-        decision_table = decision.findall(namespace + 'decisionTable')[0]
-    except IndexError:
-        return None, None
+    decision_table = decision.findall(namespace + 'decisionTable')[0]
     inputs = decision_table.findall(namespace + 'input')
     outputs = decision_table.findall(namespace + 'output')
     rules = decision_table.findall(namespace + 'rule')
@@ -115,7 +112,7 @@ def extract_keys_and_values_dict(decision: ET.Element, namespace: str):
     return map_keys_to_values, output_column_list
 
 
-def extract_inputs(decision: ET.Element, namespace: str) -> Tuple[Union[str, None], Union[Dict[str, Set[str]], None], Union[List[str], None]]:
+def extract_inputs(decision: ET.Element, namespace: str) -> Tuple[str, Dict[str, Set[str]], List[str]]:
     """
         Having a xml in the form:
         <decision id="Decision_1vu0ist" name="Decide Country">
@@ -169,8 +166,6 @@ def extract_inputs(decision: ET.Element, namespace: str) -> Tuple[Union[str, Non
         }
     """
     keys_and_values, output_column_list = extract_keys_and_values_dict(decision, namespace)
-    if keys_and_values is None and output_column_list is None:
-        return None, None, None
     out = ""
     for key, values in keys_and_values.items():
         out += f'\t\t{{\n\t\t\tkey={key}\n\t\t\tvalues=[\n'
@@ -205,7 +200,7 @@ def extract_all_rules(rules, namespace: str, key_value_dict: Dict[str, Set[str]]
             This generalises to a rule with n inputEntry
 
             The outputEntry/text.text is the value of the expected output column for the provided input
-                Note: there could be more than one outputEntry, but we can ignore this for now
+                Note: there could be more then one outputEntry, but we can ignore this for now
 
             Given a set of rules, we want to extract all the possible combinations of inputs and the expected output
         """
@@ -216,8 +211,6 @@ def extract_all_rules(rules, namespace: str, key_value_dict: Dict[str, Set[str]]
         output_entries = rule.findall(namespace + 'outputEntry')
         # list containing sets, each set has inputs and related expected output
         values = list()
-        output_column_length = len(output_entries)
-        values.append(output_column_length)
         for index, input_entry in enumerate(input_entries):
             # process input entry
             input_value = input_entry.find(namespace + 'text').text
@@ -259,13 +252,12 @@ def extract_all_rules(rules, namespace: str, key_value_dict: Dict[str, Set[str]]
                 values.append(input_value)
 
         # process output entry
-        for output_entry in output_entries:
-            output_value = output_entry.find(namespace + 'text').text
-            if ' ' not in output_value:
-                output_value = output_value.replace('"', '')
-            if output_value in ['true', 'false']:
-                output_value = f'"{output_value}"'
-            values.append(output_value)
+        output_value = output_entries[0].find(namespace + 'text').text
+        if ' ' not in output_value:
+            output_value = output_value.replace('"', '')
+        if output_value in ['true', 'false']:
+            output_value = f'"{output_value}"'
+        values.append(output_value)
         all_values.append(tuple(values))
 
     return all_values
@@ -277,16 +269,16 @@ def compute_expected_result(combination, all_rules_tuples):
     """
     valid_results = list()
     for rule_index, rule_tuple in enumerate(all_rules_tuples):
-        if len(rule_tuple)-1-rule_tuple[0] != len(combination):
+        if len(rule_tuple) - 1 != len(combination):
             print(f'rule_tuple: {rule_tuple}')
             print(f'combination: {combination}')
             input()
             continue
-        for index, value in enumerate(rule_tuple[1:-rule_tuple[0]]):
+        for index, value in enumerate(rule_tuple[:-1]):
             if value != combination[index]:
                 break
         else:
-            valid_results.append((tuple(rule_tuple[-rule_tuple[0]:]), rule_index))
+            valid_results.append((rule_tuple[-1], rule_index))
     return valid_results
 
 
@@ -295,84 +287,77 @@ def extract_test_cases(rules, key_value_dict, namespace):
     """
         Using the list of tuples in the format (expected_input1, (expected_input2.a, expected_input2.b), ..., expected_input_n, expected_output)
         generate all the possible combinations of inputs and expected output and save them in a list of tuples in the format
-        (amount_of_expected_output, input1, input2, ..., input_n, expected_output_1, ..., expected_output_n)
-        
+        (input1, input2, ..., input_n, expected_output)
+
         The input columns are thematic, therefore is not allowed to mix values from different columns
-        
+
         Each test case will have a subset of elements from the first input column as first value, a subset of elements from the second input column as second value, and so on
         The expected output will be computed using the rules.
         Note: the expected output can also be a list or empty
     """
     all_test_cases = list()
-    assert [(len(rule_tuple) == len(key_value_dict.keys()) + rule_tuple[0] + 1) for rule_tuple in all_rules_tuples]
+    assert [(len(rule_tuple) == len(key_value_dict.keys()) + 1) for rule_tuple in all_rules_tuples]
     all_possible_combinations = list()
     for index in range(len(key_value_dict.keys())):
         all_possible_combinations.append(list())
         for rule_tuple in all_rules_tuples:
-            all_possible_combinations[index].append(rule_tuple[1:][index])
+            all_possible_combinations[index].append(rule_tuple[index])
         all_possible_combinations[index] = set(all_possible_combinations[index])
     all_possible_combinations = list(itertools.product(*all_possible_combinations))
     for combination in all_possible_combinations:
         expected_result_list = compute_expected_result(combination, all_rules_tuples)
         combination = list(combination)
         if len(expected_result_list) == 0:
-            none_tuple = (None, -1, )
+            none_tuple = (None, -1,)
             combination.append((none_tuple,))
         else:
-            combination.append(tuple(expected_result_list))
+            combination.append((expected_result_list,))
         all_test_cases.append(tuple(combination))
     return all_test_cases
 
 
-def generate_test_cases(decision: ET.Element, namespace: str, key_value_dict: Dict[str, Set[str]], output_column_list: list) -> str:
+def generate_test_cases(decision: ET.Element, namespace: str, key_value_dict: Dict[str, Set[str]],
+                        output_column_list: list) -> str:
     template_single_test_case_input = '\t\t{{\n\t\t\tinputs {{\n{test_case_input}\n\t\t\t}}\n'
-    template_for_each_single_test_case_input_or_output = '\t\t\t\t{key}={value}\n'
+    template_for_each_single_test_case_input = '\t\t\t\t{key}={value}\n'
     template_single_test_result_list_output = '\t\t\tresults=[\n{test_case_output}\n\t\t\t]\n\t\t}},\n'
-    template_for_each_single_test_case_output = '\t\t\t\t{{\n\t\t\t\t\toutputs {{\n{test_case_multiple_output}\t\t\t\t\t}}\n\t\t\t\t\trowIndex=\"{row_index}\"\n\t\t\t\t}},\n'
+    template_for_each_single_test_case_output = '\t\t\t\t{{\n\t\t\t\t\toutputs {{\n\t\t\t\t\t\t{output_column_name}={output_value}\n\t\t\t\t\t}}\n\t\t\t\t\trowIndex=\"{row_index}\"\n\t\t\t\t}},\n'
 
+    out = ''
     rules = decision.findall(namespace + 'decisionTable/' + namespace + 'rule')
     all_test_cases = extract_test_cases(rules, key_value_dict, namespace)
-    out = ""
     for test_case in all_test_cases:
         inputs = ""
         for index in range(len(test_case) - 1):
-            string_version = None
-            if test_case[index] is not None and isinstance(test_case[index], str):
-                string_version = test_case[index]
-            elif test_case[index] is not None and isinstance(test_case[index], tuple) and len(test_case[index]) > 1:
+            string_version = test_case[index]
+            if test_case[index] is not None and isinstance(test_case[index], tuple) and len(test_case[index]) > 1:
                 string_version = '"' + ','.join(list(test_case[index])) + '"'
-            elif string_version is None:
+            if string_version is None:
                 string_version = '""'
-            inputs += template_for_each_single_test_case_input_or_output.format(key=list(key_value_dict.keys())[index], value=string_version)
+            inputs += template_for_each_single_test_case_input.format(key=list(key_value_dict.keys())[index],
+                                                                      value=string_version)
         inputs = template_single_test_case_input.format(test_case_input=inputs)
 
-        all_outputs = ""
-        for index, output in enumerate(list(test_case[-1])):
-            if output[0] is None:
-                outputs = template_for_each_single_test_case_output.format(output_column_name=output_column_list[0], output_value='\"\"', row_index='-1')
-                outputs = template_single_test_result_list_output.format(test_case_output=outputs[:-2])
-            else:
-                list_output = ""
-                row_index = -1
-                for element_index, element in enumerate(output):
-                    if type(element) is tuple and len(element) == 2:
-                        expected_result_tuple, row_index = element
-                    else:
-                        expected_result_tuple = element
-                    output_column_name = output_column_list[element_index]
-                    list_output += '\t\t' + template_for_each_single_test_case_input_or_output.format(key=output_column_name, value=expected_result_tuple)
-                outputs = template_for_each_single_test_case_output.format(test_case_multiple_output=list_output, row_index=row_index)
-                outputs = template_single_test_result_list_output.format(test_case_output=outputs[:-2])
-            all_outputs += outputs
-        out += inputs + all_outputs
+        if test_case[-1][0][0] is None:
+            outputs = template_for_each_single_test_case_output.format(output_column_name=output_column_list[0],
+                                                                       output_value='\"\"', row_index='-1')
+            outputs = template_single_test_result_list_output.format(test_case_output=outputs[:-2])
+        else:
+            outputs = ""
+            for expected_result_tuple, row_index in test_case[-1][0]:
+                # Assuming again that the output is a single column
+                output_column_name = output_column_list[0]
+                outputs += template_for_each_single_test_case_output.format(output_column_name=output_column_name,
+                                                                            output_value=expected_result_tuple,
+                                                                            row_index=row_index)
+            outputs = template_single_test_result_list_output.format(test_case_output=outputs[:-2])
+        out += inputs + outputs
     return out[:-2]
 
 
-def get_conf_file_content(decision: ET.Element, decision_id: str, dmn_file_name: str, namespace: str) -> Union[str, None]:
+def get_conf_file_content(decision: ET.Element, decision_id: str, dmn_file_name: str, namespace: str) -> str:
     out = 'data {\n'
     inputs, key_value_dict, output_column_list = extract_inputs(decision, namespace)
-    if inputs is None and key_value_dict is None and output_column_list is None:
-        return None
     out += '\tinputs=[\n' + inputs + '\n\t]\n'
     out += '\ttestCases=[\n' + generate_test_cases(decision, namespace, key_value_dict, output_column_list) + '\n\t]\n'
     out += '\tvariables=[]\n}\n'
@@ -402,8 +387,6 @@ def parse_dmn(dmn_path: str, save_conf_file_path: str, path_to_mapping_file: str
         if child.tag.endswith('decision'):
             decision_id = str(child.attrib['id'])
             conf_content = get_conf_file_content(child, decision_id, dmn_file_name, namespace)
-            if conf_content is None:
-                continue
             conf_file_path = save_conf_file_path + '/' + str(child.attrib['name']).replace(' ', '_') + '.conf'
             save_conf_file(conf_content, conf_file_path)
             save_decision_id_to_conf_file_mapping(path_to_mapping_file, conf_file_path, decision_id)
@@ -411,7 +394,8 @@ def parse_dmn(dmn_path: str, save_conf_file_path: str, path_to_mapping_file: str
 
 if __name__ == '__main__':
     print('Starting...')
-    parse_dmn('/home/administrator/Desktop/Knowledge-Engineering-and-Business-Intelligence/Exam/Task2.a/tmp.dmn',
-              '/home/administrator/Desktop/Knowledge-Engineering-and-Business-Intelligence/Exam/Task2.a/documents',
-              '/home/administrator/Desktop/Knowledge-Engineering-and-Business-Intelligence/Exam/Task2.a/documents/mapping2.txt')
+    parse_dmn(
+        'C:\\Users\\Filippo\\Projects\\Knowledge-Engineering-and-Business-Intelligence-Exercises\\Exam\\Task2.a\\wine_choice_system_v2_using_camunda_8.dmn',
+        'C:\\Users\\Filippo\\Projects\\Knowledge-Engineering-and-Business-Intelligence-Exercises\\Exam\\Task2.a\\documents',
+        'C:\\Users\\Filippo\\Projects\\Knowledge-Engineering-and-Business-Intelligence-Exercises\\Exam\\Task2.a\\documents\\mapping.txt')
     print('Done!')
