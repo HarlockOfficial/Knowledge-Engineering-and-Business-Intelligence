@@ -43,7 +43,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vd9gs2">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06rafg3">
@@ -67,7 +67,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rovcqu">
-          <text>"CabernetFranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mwo43s">
@@ -107,7 +107,7 @@
           <text>5</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1e06jpy">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z68wl6">
@@ -176,7 +176,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0s4bvmb">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0hbtt5q">
@@ -184,7 +184,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wmgnfk">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1fedf31">
@@ -192,7 +192,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17g16yx">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_07w0101">
@@ -261,7 +261,7 @@
           <text>2</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14kufww">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0kpj0yt">
@@ -277,7 +277,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qw3y5y">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0dxm16s">
@@ -285,7 +285,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ykysgp">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_14od5ao">
@@ -370,7 +370,7 @@
           <text>3</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10cc3rc">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_15k6ltv">
@@ -386,7 +386,7 @@
           <text>3</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1c2hxje">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dvhahj">
@@ -410,7 +410,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dugl5t">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18xi1a1">
@@ -463,7 +463,7 @@
           <text>3</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1oyelib">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0swgdk2">
@@ -495,7 +495,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1bamckf">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1wx4ir4">
@@ -519,7 +519,7 @@
           <text>4</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0s4flck">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1m4y3ml">
@@ -572,7 +572,7 @@
           <text>"Merlot"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00q870a">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06rh5uz">
@@ -601,15 +601,15 @@
       </rule>
       <rule id="DecisionRule_09rl9nl">
         <inputEntry id="UnaryTests_0r3zj3b">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wfr29g">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0au9cfo">
         <inputEntry id="UnaryTests_0lerdcr">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12uga79">
           <text>"Bordeaux"</text>
@@ -617,10 +617,10 @@
       </rule>
       <rule id="DecisionRule_1vkq4k7">
         <inputEntry id="UnaryTests_0vjwue3">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0kxcybf">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_00ap16t">
@@ -628,7 +628,7 @@
           <text>"Syrah"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1htuxme">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0o6fji7">
@@ -673,15 +673,15 @@
       </rule>
       <rule id="DecisionRule_0657tro">
         <inputEntry id="UnaryTests_0qqdsw0">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_19khyt3">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18bsuzx">
         <inputEntry id="UnaryTests_10wd2rz">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xivo17">
           <text>"Rose"</text>
@@ -689,7 +689,7 @@
       </rule>
       <rule id="DecisionRule_12jihl0">
         <inputEntry id="UnaryTests_1qecw81">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1g86340">
           <text>"Northwest"</text>
@@ -737,7 +737,7 @@
           <text>"Merlot"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1d9it6m">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_07ya8sx">
@@ -766,15 +766,15 @@
       </rule>
       <rule id="DecisionRule_1rgx8k6">
         <inputEntry id="UnaryTests_1emhtaf">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0odg3vo">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lqh8ot">
         <inputEntry id="UnaryTests_027gvzs">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_16sa0cm">
           <text>"Bordeaux"</text>
@@ -782,10 +782,10 @@
       </rule>
       <rule id="DecisionRule_0cs00uk">
         <inputEntry id="UnaryTests_1m0l5d7">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0fksdc1">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1jxqlvi">
@@ -793,7 +793,7 @@
           <text>"Syrah"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1aag9n9">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ot6o9i">
@@ -838,7 +838,7 @@
       </rule>
       <rule id="DecisionRule_0b47khc">
         <inputEntry id="UnaryTests_1d7rtit">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1cviblb">
           <text>"Rose"</text>
@@ -846,15 +846,15 @@
       </rule>
       <rule id="DecisionRule_13w24pv">
         <inputEntry id="UnaryTests_1o4ghs0">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0k0gpjp">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0smdipn">
         <inputEntry id="UnaryTests_1ookq6l">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1mhigzz">
           <text>"Northwest"</text>
@@ -958,13 +958,13 @@
     <variable id="InformationItem_0t3x8s5" name="Wine_List" />
     <literalExpression id="LiteralExpression_07je15t">
       <text>[
-"Supertuscan",
+"Super Tuscan",
 "Syrah",
 "Rose",
 "Merlot",
-"Cabernetfranc",
+"Cabernet Franc",
 "Viura",
-"Pinotnoir",
+"Pinot Noir",
 "Bordeaux",
 "Rhone",
 "Northwest",
@@ -988,7 +988,7 @@
           <text>"Tuscany"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ht3occ">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0le7psn">
@@ -996,7 +996,7 @@
           <text>"Tuscany"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_00bnt5d">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qnsl6r">
@@ -1028,7 +1028,7 @@
           <text>"Loirevalley"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1arbko5">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1m8293p">
@@ -1084,7 +1084,7 @@
           <text>"Bordeaux"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1b5ciff">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ca78dw">
@@ -1100,7 +1100,7 @@
           <text>"Veneto"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0yvx2sv">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0vrbvvh">
@@ -1108,7 +1108,7 @@
           <text>"Veneto"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17lfk6k">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0bon6b3">
@@ -1132,7 +1132,7 @@
           <text>"Catalunia"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1py2q1a">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dv43bj">
@@ -1169,7 +1169,7 @@
           <text>"Tuscany"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1cppqoe">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1n7c7ca">
@@ -1177,7 +1177,7 @@
           <text>"Tuscany"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01s7r9o">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0xe0845">
@@ -1209,7 +1209,7 @@
           <text>"Loirevalley"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1yzi56y">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1oe0lc5">
@@ -1265,7 +1265,7 @@
           <text>"Bordeaux"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0zq80r0">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_03x78ib">
@@ -1281,7 +1281,7 @@
           <text>"Veneto"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15u4ioc">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_14ts8sj">
@@ -1289,7 +1289,7 @@
           <text>"Veneto"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ijtyqj">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_05eunu8">
@@ -1429,7 +1429,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1u036wp">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_092pre3">
@@ -1445,7 +1445,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ac7s78">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1az370a">
@@ -1461,7 +1461,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wa14tu">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ou7j90">
@@ -1485,7 +1485,7 @@
           <text>"Spain"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1yzl83m">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0knx6v9">
@@ -1517,7 +1517,7 @@
           <text>"France"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jixcja">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0i9drlf">
@@ -1570,7 +1570,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13dfng1">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_03dbmb7">
@@ -1586,7 +1586,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1sa5yfx">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0h8heba">
@@ -1602,7 +1602,7 @@
           <text>"Italy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mwxvmg">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_01z2ttq">
@@ -1626,7 +1626,7 @@
           <text>"Spain"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08in1zz">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_16fj62k">
@@ -1658,7 +1658,7 @@
           <text>"France"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ex1s00">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0zkk89e">
@@ -1863,7 +1863,7 @@
       </rule>
       <rule id="DecisionRule_0cms6cy">
         <inputEntry id="UnaryTests_0iyp1or">
-          <text>"Grilled salmon"</text>
+          <text>"Grilled Salmon"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gbvsc7">
           <text>"Salmon"</text>
@@ -1922,7 +1922,7 @@
           <text>list contains(Ingredient,"Beef")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ktuos5">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0txn73i">
@@ -1946,7 +1946,7 @@
           <text>list contains(Ingredient,"Parmesan")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_090iatc">
-          <text>"Supertuscan"</text>
+          <text>"Super Tuscan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0tdwxs3">
@@ -1970,7 +1970,7 @@
           <text>list contains(Ingredient,"Mozzarella")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wlywhm">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_10rmc96">
@@ -1994,7 +1994,7 @@
           <text>list contains(Ingredient,"Tomato")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rscz1i">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ergfe9">
@@ -2010,7 +2010,7 @@
           <text>list contains(Ingredient,"Maitake Mushroom")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07a1y7i">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0p965yy">
@@ -2018,7 +2018,7 @@
           <text>list contains(Ingredient,"Maitake Mushroom")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0vt2u0j">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0o9l6ob">
@@ -2050,7 +2050,7 @@
           <text>list contains(Ingredient,"Turkey")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0aq8pk4">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1rdoo38">
@@ -2106,7 +2106,7 @@
           <text>list contains(Ingredient,"Beef")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f07p24">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ahesbk">
@@ -2130,7 +2130,7 @@
           <text>list contains(Ingredient,"Parmesan")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10pdrxo">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ryevev">
@@ -2194,7 +2194,7 @@
           <text>list contains(Ingredient,"Mozzarella")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0txw8uk">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_10b7n8t">
@@ -2210,7 +2210,7 @@
           <text>list contains(Ingredient,"Mozzarella")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08sycdm">
-          <text>"Pinotnoir"</text>
+          <text>"Pinot Noir"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13j6tzj">
@@ -2242,7 +2242,7 @@
           <text>list contains(Ingredient,"Tomato")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ozxlx4">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ebjrn5">
@@ -2258,7 +2258,7 @@
           <text>list contains(Ingredient,"Maitake Mushroom")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omz8q7">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0vgufkh">
@@ -2298,7 +2298,7 @@
           <text>list contains(Ingredient,"Turkey")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nfmut7">
-          <text>"Cabernetfranc"</text>
+          <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1v62x50">
@@ -3198,31 +3198,9 @@
           <text>"Italy"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gs0wx8">
-          <text>"Veneto"</text>
+          <text>"Veneto","Tuscany","Sicily"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15m3olw">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0wyc7i0">
-        <inputEntry id="UnaryTests_18zbv5c">
-          <text>"Italy"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0owngk4">
-          <text>"Tuscany"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_01b2si1">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1mhqqat">
-        <inputEntry id="UnaryTests_12byh23">
-          <text>"Italy"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0po7wlu">
-          <text>"Sicily"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0jp8pld">
           <text>Filtered_By_Region_Wines</text>
         </outputEntry>
       </rule>
@@ -3231,53 +3209,9 @@
           <text>"France"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0j4y49e">
-          <text>"Provence"</text>
+          <text>"Provence","Loirevalley","Champagne","Bordeaux","Burgundy"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0k0y9b7">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_112gkof">
-        <inputEntry id="UnaryTests_1hh9e6m">
-          <text>"France"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mt0l7o">
-          <text>"Loirevalley"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_16vxs86">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0tk362i">
-        <inputEntry id="UnaryTests_19he6pb">
-          <text>"France"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wksuu4">
-          <text>"Champagne"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1r9mfwy">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_01bev2g">
-        <inputEntry id="UnaryTests_11ysvpa">
-          <text>"France"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cmwo0k">
-          <text>"Bordeaux"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zyoc2p">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_16qq5oa">
-        <inputEntry id="UnaryTests_0xssf71">
-          <text>"France"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lit77r">
-          <text>"Burgundy"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_02g2nwg">
           <text>Filtered_By_Region_Wines</text>
         </outputEntry>
       </rule>
@@ -3286,31 +3220,9 @@
           <text>"Spain"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1twsutr">
-          <text>"Catalunia"</text>
+          <text>"Catalunia","Rioja","Rhonevalley"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0q86qoe">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0u4qs2z">
-        <inputEntry id="UnaryTests_06hxqm1">
-          <text>"Spain"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1m9t3nr">
-          <text>"Rioja"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1pcccy9">
-          <text>Filtered_By_Region_Wines</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_14kxki0">
-        <inputEntry id="UnaryTests_00nzplr">
-          <text>"Spain"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qnmvgw">
-          <text>"Rhonevalley"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_09m1uc6">
           <text>Filtered_By_Region_Wines</text>
         </outputEntry>
       </rule>
@@ -3345,6 +3257,39 @@
         </inputEntry>
         <outputEntry id="LiteralExpression_0fvcfk6">
           <text>["region_country_check_failed"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pl0pex">
+        <inputEntry id="UnaryTests_0yoq7rj">
+          <text>""</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iubngg">
+          <text>"Rioja","Loirevalley","Provence","Veneto","Tuscany","Sicily","Rhonevalley","Champagne","Bordeaux","Burgundy","Catalunia"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oycnne">
+          <text>Filtered_By_Region_Wines</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09qhibx">
+        <inputEntry id="UnaryTests_05k4miy">
+          <text>"Spain","Italy","France"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pndsca">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h7zrr3">
+          <text>Filtered_By_Region_Wines</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pik4bp">
+        <inputEntry id="UnaryTests_1bhaiyd">
+          <text>""</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bm77nq">
+          <text>""</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15p0ewj">
+          <text>Filtered_By_Region_Wines</text>
         </outputEntry>
       </rule>
     </decisionTable>
