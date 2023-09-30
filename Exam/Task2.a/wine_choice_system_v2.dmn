@@ -2133,14 +2133,6 @@
           <text>"Cabernet Franc"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0ryevev">
-        <inputEntry id="UnaryTests_1qwlafg">
-          <text>list contains(Ingredient,"Parmesan")</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1okarbh">
-          <text>"Northwest"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_08o54wr">
         <inputEntry id="UnaryTests_0d82gcu">
           <text>list contains(Ingredient,"Parmesan")</text>
