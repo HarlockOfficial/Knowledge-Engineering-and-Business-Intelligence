@@ -29,13 +29,13 @@ grape(viura).
 grape(cabernetfranc).
 grape(syrah).
 
-%dishes
+%ingredients
 
-dish(beef).
-dish(crab).
-dish(turkey).
-dish(parmesan).
-dish(maitakemushroom).
+ingredient(beef).
+ingredient(crab).
+ingredient(turkey).
+ingredient(parmesan).
+ingredient(maitakemushroom).
 
 %wine id - grapes
 
@@ -154,7 +154,7 @@ tannin(h, 4).
 tannin(i, 4).
 tannin(j, 4).
 
-%wine id - dish
+%wine id - ingredient
 
 wineusedwith(a, beef).
 wineusedwith(b, turkey).
@@ -166,6 +166,7 @@ wineusedwith(f, crab).
 wineusedwith(f, turkey).
 wineusedwith(g, maitakemushroom).
 wineusedwith(g, turkey).
+wineusedwith(g, crab).
 wineusedwith(h, beef).
 wineusedwith(i, beef).
 wineusedwith(j, maitakemushroom).
@@ -183,3 +184,12 @@ winename(g, pinotnoir).
 winename(h, bordeaux).
 winename(i, rhone).
 winename(j, northwest).
+
+%dish id - ingredients
+
+food_contains(risotto_beef, beef).
+food_contains(risotto_beef, parmesan).
+food_contains(steamed_turkey, turkey).
+food_contains(steamed_turkey, maitakemushroom).
+food_contains(sea_soup, crab).
+food_contains(sea_soup, maitakemushroom).
