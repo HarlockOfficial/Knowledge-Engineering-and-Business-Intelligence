@@ -141,7 +141,7 @@ savory(g, 3).
 savory(h, 4).
 savory(i, 4).
 savory(j, 3).
-chardonnay(k, 2).
+savory(k, 2).
 
 dry(a, 4).
 dry(b, 4).
