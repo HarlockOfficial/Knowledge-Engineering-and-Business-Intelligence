@@ -64,6 +64,17 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#contained_in_dish -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#contained_in_dish">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#contains_ingredient"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#contains_grape -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#contains_grape">
@@ -75,10 +86,42 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#contains_ingredient -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#contains_ingredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#dish_matches -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dish_matches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#dish_perfectly_matches -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dish_perfectly_matches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#has_region -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#has_region">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
     </owl:ObjectProperty>
     
 
@@ -87,6 +130,8 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_contained">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
     </owl:ObjectProperty>
     
 
@@ -96,6 +141,19 @@
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_paired_with">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#paired_with"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#is_perfectly_paired_with -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_perfectly_paired_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#perfectly_paired_with"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
     </owl:ObjectProperty>
     
 
@@ -105,6 +163,18 @@
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#is_produced">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#produces"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#paired -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#paired">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
     </owl:ObjectProperty>
     
 
@@ -112,9 +182,19 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#paired_with -->
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#paired_with">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#paired"/>
         <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
-        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#perfectly_paired_with -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#perfectly_paired_with">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#paired"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
     </owl:ObjectProperty>
     
 
@@ -133,6 +213,8 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#region_produces">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
+        <rdfs:range rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
     </owl:ObjectProperty>
     
 
@@ -217,6 +299,14 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#dairy -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dairy">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#dish -->
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dish">
@@ -233,11 +323,18 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#ingredient -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#meat -->
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#meat">
-        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
-        <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
     </owl:Class>
     
 
@@ -247,6 +344,15 @@
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#red">
         <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
         <owl:disjointWith rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#red_meat -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#red_meat">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
     </owl:Class>
     
 
@@ -271,7 +377,7 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#seafood -->
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#seafood">
-        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
     </owl:Class>
     
 
@@ -293,10 +399,27 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#vegetable -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#vegetable">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#white -->
 
     <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#white">
         <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#white_meat -->
+
+    <owl:Class rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#white_meat">
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
     </owl:Class>
     
 
@@ -331,7 +454,28 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#beef -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#beef">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_meat"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef_and_parmesan_meatballs_with_maitake_mushroom_sauce"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grilled_steak"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#beef_and_parmesan_meatballs_with_maitake_mushroom_sauce -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#beef_and_parmesan_meatballs_with_maitake_mushroom_sauce">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
     </owl:NamedIndividual>
     
 
@@ -341,6 +485,41 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#burgundy -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#burgundy">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
+        <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#caprese_salad -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#caprese_salad">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
     </owl:NamedIndividual>
     
 
@@ -350,6 +529,8 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
     </owl:NamedIndividual>
     
 
@@ -359,6 +540,17 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#champagne">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#chardonnay -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#chardonnay">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
     </owl:NamedIndividual>
     
 
@@ -366,7 +558,24 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#crab -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#crab">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab_and_parmesan_stuffed_shrimp"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#crab_and_parmesan_stuffed_shrimp -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#crab_and_parmesan_stuffed_shrimp">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp"/>
     </owl:NamedIndividual>
     
 
@@ -375,6 +584,38 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#france">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#burgundy"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#champagne"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#provence"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#grilled_salmon -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#grilled_salmon">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#salmon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#grilled_steak -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#grilled_steak">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
     </owl:NamedIndividual>
     
 
@@ -383,6 +624,15 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#italy">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#marches"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sicily"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#veneto"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
     </owl:NamedIndividual>
     
 
@@ -401,6 +651,9 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
     </owl:NamedIndividual>
     
 
@@ -408,7 +661,16 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#vegetable"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef_and_parmesan_meatballs_with_maitake_mushroom_sauce"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey_and_maitake_mushroom_risotto"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
     </owl:NamedIndividual>
     
 
@@ -425,7 +687,28 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#merlot -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#merlot">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rhone"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dairy"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#caprese_salad"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
     </owl:NamedIndividual>
     
 
@@ -433,7 +716,20 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#parmesan -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan">
-        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sidedish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dairy"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef_and_parmesan_meatballs_with_maitake_mushroom_sauce"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab_and_parmesan_stuffed_shrimp"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
     </owl:NamedIndividual>
     
 
@@ -441,7 +737,11 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
     </owl:NamedIndividual>
     
 
@@ -451,6 +751,7 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#provence">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
     </owl:NamedIndividual>
     
 
@@ -460,6 +761,7 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rhonevalley">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rhone"/>
     </owl:NamedIndividual>
     
 
@@ -469,6 +771,31 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#rioja">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#salmon -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#salmon">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grilled_salmon"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#shrimp -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seafood"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab_and_parmesan_stuffed_shrimp"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
     </owl:NamedIndividual>
     
 
@@ -478,6 +805,7 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#sicily">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
     </owl:NamedIndividual>
     
 
@@ -486,6 +814,13 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#spain">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#country"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#levante"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#rhonevalley"/>
+        <has_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#rioja"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rhone"/>
+        <produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
     </owl:NamedIndividual>
     
 
@@ -493,7 +828,28 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#syrah -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#syrah">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rhone"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#tomato -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#tomato">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#vegetable"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#caprese_salad"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
     </owl:NamedIndividual>
     
 
@@ -501,7 +857,27 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#turkey -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#turkey">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#meat"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white_meat"/>
+        <contained_in_dish rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey_and_maitake_mushroom_risotto"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest"/>
+        <is_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay"/>
+        <is_perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#turkey_and_maitake_mushroom_risotto -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#turkey_and_maitake_mushroom_risotto">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#seconddish"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <contains_ingredient rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
     </owl:NamedIndividual>
     
 
@@ -511,6 +887,9 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan"/>
     </owl:NamedIndividual>
     
 
@@ -520,6 +899,8 @@
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#veneto">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#region"/>
         <belongs_to rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc"/>
+        <region_produces rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir"/>
     </owl:NamedIndividual>
     
 
@@ -527,7 +908,12 @@
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#viura -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#viura">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#grape"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ingredient"/>
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose"/>
+        <is_contained rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura"/>
     </owl:NamedIndividual>
     
 
@@ -536,10 +922,15 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_bordeaux">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
@@ -553,11 +944,27 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_cabernetfranc">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#veneto"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#cabernetfranc"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
@@ -567,14 +974,60 @@
     
 
 
+    <!-- urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_chardonnay">
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
+        <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#burgundy"/>
+        <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#chardonnay"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#salmon"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#salmon"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bold>
+        <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
+        <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fruity>
+        <savory rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</savory>
+        <tannin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</tannin>
+    </owl:NamedIndividual>
+    
+
+
     <!-- urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot -->
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_merlot">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -588,11 +1041,19 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_northwest">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#bordeaux"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -606,11 +1067,19 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_pinotnoir">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#veneto"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#mozzarella"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -624,10 +1093,11 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rhone">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#rhonevalley"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -641,11 +1111,22 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_rose">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#champagne"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#provence"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#pinotnoir"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#viura"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#shrimp"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
@@ -660,10 +1141,15 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_supertuscan">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tuscany"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#merlot"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -677,11 +1163,20 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_syrah">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#red_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#loirevalley"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#sicily"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#syrah"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#france"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#italy"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#maitakemushroom"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#tomato"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#beef"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</fruity>
@@ -695,11 +1190,17 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#wine_viura">
         <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#white_wine"/>
+        <rdf:type rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#wine"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#catalunia"/>
         <belongs_to_region rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#rioja"/>
         <contains_grape rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#viura"/>
+        <is_produced rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#spain"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <paired rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#salmon"/>
         <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#crab"/>
-        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#turkey"/>
+        <paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#parmesan"/>
+        <perfectly_paired_with rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#salmon"/>
         <bold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</bold>
         <dry rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</dry>
         <fruity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</fruity>
@@ -724,6 +1225,12 @@
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#win">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#ing">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:absolute:it.unicam.kebi.exam.task2.c#dis">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -766,6 +1273,100 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#produces"/>
                         <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#coun"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Perfect match dish with wine</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#contained_in_dish"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ing"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dis"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#perfectly_paired_with"/>
+                                <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                                <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ing"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish_perfectly_matches"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dis"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Match dish with wine</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#contained_in_dish"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ing"/>
+                        <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dis"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#paired_with"/>
+                                <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
+                                <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#ing"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dish_matches"/>
+                        <swrl:argument1 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#dis"/>
                         <swrl:argument2 rdf:resource="urn:absolute:it.unicam.kebi.exam.task2.c#win"/>
                     </rdf:Description>
                 </rdf:first>
