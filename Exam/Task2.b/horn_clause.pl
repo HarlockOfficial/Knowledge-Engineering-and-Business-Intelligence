@@ -1,6 +1,7 @@
 :- use_module(library(lists)).
 :- use_module(library(pairs)).
 :- use_module(library(yall)).
+:- use_module(library(solution_sequences)).
 :- ensure_loaded(knowledge_base).
 
 % COUNTRY, REGION, GRAPE and DISH are passed as lists
@@ -72,7 +73,8 @@ weakquery(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCO
     ),
     winename(X, WINE).
 
-q2(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, STRONG_WINE, WEAK_WINE) :-
+query2(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, STRONG_WINE, WEAK_WINE) :-
+    print("Called Q2 With Params: "), print(COUNTRY), print(REGION), print(GRAPE), print(FRUITY), print(BOLD), print(SAVORY), print(DRY), print(TANNIN), print(DISH), print(NOTCOUNTRY), print(NOTREGION), print(NOTGRAPE), print(NOTDISH), nl,
     duplicate_term(COUNTRY, COUNTRY_ORIG),
     duplicate_term(REGION, REGION_ORIG),
     duplicate_term(GRAPE, GRAPE_ORIG),
@@ -88,6 +90,24 @@ q2(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, 
     duplicate_term(NOTDISH, NOTDISH_ORIG),
     setof(WINE1, query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, WINE1), STRONG_WINE),
     setof(WINE2, weakquery(COUNTRY_ORIG, REGION_ORIG, GRAPE_ORIG, FRUITY_ORIG, BOLD_ORIG, SAVORY_ORIG, DRY_ORIG, TANNIN_ORIG, DISH_ORIG, NOTCOUNTRY_ORIG, NOTREGION_ORIG, NOTGRAPE_ORIG, NOTDISH_ORIG, WINE2), WEAK_WINE).
+
+query3(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, STRONG_WINE, WEAK_WINE) :-
+    print("Called Q3 With Params: "), print(COUNTRY), print(REGION), print(GRAPE), print(FRUITY), print(BOLD), print(SAVORY), print(DRY), print(TANNIN), print(DISH), print(NOTCOUNTRY), print(NOTREGION), print(NOTGRAPE), print(NOTDISH), nl,
+    duplicate_term(COUNTRY, COUNTRY_ORIG),
+    duplicate_term(REGION, REGION_ORIG),
+    duplicate_term(GRAPE, GRAPE_ORIG),
+    duplicate_term(FRUITY, FRUITY_ORIG),
+    duplicate_term(BOLD, BOLD_ORIG),
+    duplicate_term(SAVORY, SAVORY_ORIG),
+    duplicate_term(DRY, DRY_ORIG),
+    duplicate_term(TANNIN, TANNIN_ORIG),
+    duplicate_term(DISH, DISH_ORIG),
+    duplicate_term(NOTCOUNTRY, NOTCOUNTRY_ORIG),
+    duplicate_term(NOTREGION, NOTREGION_ORIG),
+    duplicate_term(NOTGRAPE, NOTGRAPE_ORIG),
+    duplicate_term(NOTDISH, NOTDISH_ORIG),
+    distinct(query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, STRONG_WINE)),
+    distinct(weakquery(COUNTRY_ORIG, REGION_ORIG, GRAPE_ORIG, FRUITY_ORIG, BOLD_ORIG, SAVORY_ORIG, DRY_ORIG, TANNIN_ORIG, DISH_ORIG, NOTCOUNTRY_ORIG, NOTREGION_ORIG, NOTGRAPE_ORIG, NOTDISH_ORIG, WEAK_WINE)).
 
 softened_query(COUNTRY, REGION, GRAPE, FRUITY, BOLD, SAVORY, DRY, TANNIN, DISH, NOTCOUNTRY, NOTREGION, NOTGRAPE, NOTDISH, WINE, THRESHOLD) :-
     validcountry(COUNTRY),
